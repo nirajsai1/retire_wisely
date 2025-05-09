@@ -1,6 +1,7 @@
 import React, { useState ,useRef , useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Book_an_appointment from "./js/Book_an_appointment";
 import Home from "./js/Home";
 import Aboutus from "./js/Aboutus";
 import Contactus from "./js/Contactus";
@@ -18,6 +19,7 @@ import College_planning from "./js/quick_links/College_planning";
 import Retirement_planning from "./js/quick_links/Retirement_planning";
 import Tax_planning from "./js/quick_links/Tax_planning";
 import Privacy_policy from "./js/Privacy_policy";
+import { Our_blog } from "./js/Our_blog";
 function App() {
   const navigate=useNavigate();
   const [isOpen, setIsOpen] = useState(false);
@@ -48,8 +50,8 @@ function App() {
   }
   return (
       <div>
-        <div className="bg-green-400 p-5 flex justify-center items-center gap-x-8 text-white text-sm w-full z-10">
-          <button className="font-semibold">BOOK APPOINTMENT</button>
+        <div className="bg-[#1bcb81] p-5 flex justify-center items-center gap-x-8 text-white text-sm w-full z-10">
+          <button className="font-semibold" onClick={() =>navigate('/baa')}>BOOK APPOINTMENT</button>
           <div className="flex items-center gap-x-2">
             <img src={clock} className="w-5 h-5" alt="clock" />
             <p>8 AM to 6 PM - Monday to Friday</p>
@@ -100,9 +102,8 @@ function App() {
     </div>
               <Link to="/partnership">PARTNERSHIP</Link>
               <Link to="/contactus">CONTACT US</Link>
-              <Link to='/useful_links'>Fc</Link>
-              <div className="flex gap-4">
-              <img src={facebook} className="w-5 h-5"></img>
+                      <div className="flex gap-4">
+              <img src={facebook}  className="w-5 h-5"></img>
               <img src={instagram} className="w-5 h-5"></img>
               </div>
             </div>
@@ -123,6 +124,8 @@ function App() {
             <Route path="/college_p" element={<College_planning></College_planning>}></Route>
             <Route path="/tax_p" element={<Tax_planning></Tax_planning>}></Route>
             <Route path='/pp' element={<Privacy_policy/>}></Route>
+            <Route path='/our_blog' element={<Our_blog></Our_blog>}></Route>
+            <Route path='/baa' element={<Book_an_appointment></Book_an_appointment>}></Route>
           </Routes>
         </div>
         <footer className="bg-[#002e5b] text-white">
@@ -168,7 +171,7 @@ function App() {
             <li><Link to='/contactus'>Contactus</Link></li>
             <li><Link to='/pp'>Privacy Policy</Link></li>
             <li>Book an Appointment</li>
-            <li>Our Blog</li>
+            <li><Link to='/our_blog'>Our Blog</Link></li>
           </ul>
         </div>
       </div>

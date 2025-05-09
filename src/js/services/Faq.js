@@ -11,19 +11,28 @@ const Faq = () =>
         },
         { question: 'What is a Financial Planning?' ,
             answer:
-            'Financial planning is a step-by-step approach to meet one’s life goals. A financial plan acts as a guide as you go through life’s journey. Essentially, it helps you be in control of your income, expenses, investments, taxes, protection, wealth building and preserving wealth such that you can manage your money and achieve your goals.'
-        },
+            'Financial planning is a step-by-step approach to meet one’s life goals. A financial plan acts as a guide as you go through life’s journey. Essentially, it helps you be in control of your income, expenses, investments, taxes, protection, wealth building and preserving wealth such that you can manage your money and achieve your goals.'       },
         { question: 'Why you should work with a Financial Professional?',
             answer:'Financial Professionals provide a broad range of financial services and offer and educate clients on a variety of money topics from life insurance to the various diversified wealth building strategies and solutions. They recommend products and services, and may assist with opening or managing accounts.'
          },
         { question: 'What is Estate Planning?',
             answer:'That is estate planning – planning in advance, naming the people or organizations you want to receive the things you own after you die, and taking steps now to make carrying out your plan as easy as possible later. However, good estate planning is much more than that. It should also do the following:'
          },
-        { question: 'Why Estate Planning so important?' },
-        { question: 'What is a Last Will & Testament?' },
-        { question: 'Why is a Living Trust?' },
-        { question: 'What are the 6 steps in the estate planning process?' },
-        { question: 'What is Protection Planning?' },
+        { question: 'Why Estate Planning so important?',
+          answer: 'Besides making sure your assets get to the people you choose, planning can help minimize income, gift and estate taxes, too. Without an estate plan, and specifically a will, the laws in your state will determine what happens to your possessions, and the courts will decide who gets custody of your children.If You Do Not Have a Plan, Your State Has One For You. But You Might Not Like It. If you are looking for bracelet. There’s something to suit every look, from body-hugging to structured, from cuffs to chain chain bracelet and cuffs.'
+        },
+        { question: 'What is a Last Will & Testament?' ,
+          answer:'A Will or Testament is a legal document that expresses a person’s (testator) wishes as to how their property (estate) is to be distributed after their death and as to which person (executor) is to manage the property until its final distribution'
+        },
+        { question: 'Why is a Living Trust?' ,
+          answer:'A living trust is an alternative to probate. This document places all of the assets that you own during your lifetime into a revocable trust. A living trust can be changed, amended or terminated in whole or in part by the individual at any time, provided he or she is of sound mind. Under a living trust, you can be named as your own trustee for your own property. Upon your disability during your lifetime, you can name a successor trustee to manage your assets and pay your debts. Upon your death, you can name a successor trustee to ensure that your assets are distributed as you so designate in your living trust.'
+        },
+        { question: 'What are the 6 steps in the estate planning process?', 
+          answer: 'Take Inventory of Your Estate. First, narrow down what belongs to you.'  
+        },
+        { question: 'What is Protection Planning?', 
+          answer: 'Protection planning typically involves utilizing various forms of insurance to help safeguard your family and the assets you’ve worked so hard to accumulate. Without these plans in place, an untimely accident, illness or death could have a significant impact on your financial and family future.'
+        },
       ];
       const [activeIndex, setActiveIndex] = useState();
 
@@ -49,7 +58,9 @@ const Faq = () =>
             </button>
             {activeIndex === index && faq.answer && (
               <div className="px-6 py-4 text-blue-900 bg-gray-100">
-                {faq.answer}
+                {
+                  <p>{faq.answer}</p>
+                }
               </div>
             )}
           </div>
