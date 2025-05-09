@@ -10,6 +10,8 @@ import estate from "../images/Estate_planing.png";
 import insurance from "../images/Insurance_planing.jpg";
 import retirement from "../images/Retirement_planing.jpg";
 import List_of_products from "../images/List_of_products.png";
+import mb from "../images/mb_big.jpeg";
+import { Handshake } from "lucide-react";
 function Home() {
   return (
     <div>
@@ -75,6 +77,53 @@ function Home() {
       </div>
     </div>
     <img src={background}></img>
+    <div className="bg-white text-gray-800">
+      {/* Team Section */}
+      <section className="max-w-screen-xl mx-auto px-24 py-16 ">
+        <div className="flex gap-10 ">
+        <h2 className="text-4xl font-light text-gray-700 mb-2">Meet Our Team</h2>
+        <p className="text-blue-900 text-sm mb-10 max-w-3xl">
+          Meet our experienced team of financial professionals, ready to guide you towards your goals in investments,
+          retirement, taxes, insurance, and more. Personalized advice awaits!
+        </p>
+        </div>
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-10">
+          {/* Image */}
+          <div className="w-full md:w-60">
+            <img
+              src={mb} // Replace with your image path
+              alt="Madhu Budati"
+              className="w-full rounded-lg shadow-md"
+            />
+          </div>
+
+          {/* Info Box */}
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-blue-900">Madhu Budati</h3>
+            <p className="text-lg text-gray-500 mb-4">CEO/President</p>
+            <div className="bg-gray-100 rounded-md p-5 mb-4">
+              <p className="text-gray-700 text-sm">
+                Madhusudana Budati is an IT Engineer by background but now owns and operates a successful financial services
+                agency. Madhusudana has 20+ years of corporate…
+              </p>
+            </div>
+            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-md transition">
+              VIEW PROFILE
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Providers Section */}
+      <section className="bg-white px-6 md:px-20 py-12 border-t">
+        <div className="flex items-center gap-4 max-w-screen-xl mx-auto px-28 py-12">
+          <div className="p-2 rounded-md bg-green-100 text-green-600">
+            <Handshake className="w-10 h-10" />
+          </div>
+          <h2 className="text-3xl font-semibold text-gray-500">Our Product Providers</h2>
+        </div>
+      </section>
+    </div>
     <img src={List_of_products} className="max-w-screen-xl mx-auto px-20 py-3 pb-16"></img>
     </div>
   );

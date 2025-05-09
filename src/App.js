@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState ,useRef , useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Home from "./js/Home";
@@ -9,13 +9,39 @@ import Resources from "./js/Resources";
 import Services from "./js/Services";
 import image from "./images/Logo.jpg";
 import Faq from "./js/services/Faq";
-import FC from "./js/services/Financial_Calculators";
+import FC from "./js/Financial_Calculators";
 import Useful_links from "./js/services/Useful_Links";
 import clock from "./images/clock_icon.webp";
 import instagram from "./images/Instagram.webp";
 import facebook from "./images/Facebook.webp";
+import College_planning from "./js/quick_links/College_planning";
+import Retirement_planning from "./js/quick_links/Retirement_planning";
+import Tax_planning from "./js/quick_links/Tax_planning";
+import Privacy_policy from "./js/Privacy_policy";
 function App() {
   const navigate=useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setDropdownOpen((prev) => !prev);
+  };
+
+  const handleOptionClick = () => {
+    setDropdownOpen(false); // Close on click
+  };
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   const handlenav = () =>
   {
     navigate('/')
@@ -37,9 +63,44 @@ function App() {
               <Link to="/">HOME</Link>
               <Link to="/aboutus">ABOUT US</Link>
               <Link to="/services">SERVICES</Link>
-              <Link to="/resources">RESOURCES</Link>
+              <div className="relative group inline-block">
+              <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={toggleDropdown}
+              className="font-semibold text-sm focus:outline-none"
+            >
+              RESOURCES
+            </button>
+            {dropdownOpen && (
+              <div className="absolute bg-white shadow-lg mt-2 rounded-md z-30 w-40">
+                <Link
+                  to="/fc"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={handleOptionClick}
+                >
+                  Financial Calculators
+                </Link>
+                <Link
+                  to="/useful_links"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={handleOptionClick}
+                >
+                 Useful Links 
+                </Link>
+                <Link
+                  to="/faq"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={handleOptionClick}
+                >
+                  Frequently Asked Questions
+                </Link>
+              </div>
+            )}
+          </div>
+    </div>
               <Link to="/partnership">PARTNERSHIP</Link>
               <Link to="/contactus">CONTACT US</Link>
+              <Link to='/useful_links'>Fc</Link>
               <div className="flex gap-4">
               <img src={facebook} className="w-5 h-5"></img>
               <img src={instagram} className="w-5 h-5"></img>
@@ -58,6 +119,10 @@ function App() {
             <Route path="/faq" element={<Faq />} />
             <Route path="/fc" element={<FC />} />
             <Route path="/useful_links" element={<Useful_links />} />
+            <Route path="/retirement_p" element={<Retirement_planning/>}></Route>
+            <Route path="/college_p" element={<College_planning></College_planning>}></Route>
+            <Route path="/tax_p" element={<Tax_planning></Tax_planning>}></Route>
+            <Route path='/pp' element={<Privacy_policy/>}></Route>
           </Routes>
         </div>
         <footer className="bg-[#002e5b] text-white">
@@ -87,9 +152,9 @@ function App() {
         <div>
           <h3 className="text-xl font-bold border-t-2 border-[#19e49a] pt-2 mb-3">QUICK LINKS</h3>
           <ul className="space-y-1">
-            <li>Retirement planning</li>
-            <li>College Planning</li>
-            <li>Tax planning</li>
+            <li><Link to='/retirement_p'>Retirement planning</Link></li>
+            <li><Link to='/college_p'>College Planning</Link></li>
+            <li><Link to='/tax_p'>Tax planning</Link></li>
           </ul>
         </div>
 
@@ -101,7 +166,7 @@ function App() {
             <li><Link to='/services'>Services</Link></li>
             <li><Link to='/resources'>Resources</Link></li>
             <li><Link to='/contactus'>Contactus</Link></li>
-            <li>Privacy Policy</li>
+            <li><Link to='/pp'>Privacy Policy</Link></li>
             <li>Book an Appointment</li>
             <li>Our Blog</li>
           </ul>

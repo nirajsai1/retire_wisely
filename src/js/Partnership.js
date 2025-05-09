@@ -1,7 +1,22 @@
 import React from "react";
 import partnership from "../images/partnership_1.jpg";
+import image from "../images/image.png";
 function Partnership()
 {
+  const bulletPoints = [
+    "No Major Investment",
+    "No Franchise Fees",
+    "No Loss of Job Security",
+    "No Experience Required",
+    "Start as Part Time/Full Time",
+    "Revolutionary Compensation System",
+    "Proven, Predictable and Profitable Business System",
+    "Tremendous leadership team with an unparalleled track record of success",
+    "Impressive business history, revolutionizing some of the largest industries in the world",
+    "Innovative, consumer-oriented concepts of leading-edge product provider companies",
+    "Cutting-edge technology to help build and run your business",
+    "World-class recognition and reward system",
+  ];
     return(
         <>
         <div className="bg-gray-50">
@@ -24,6 +39,12 @@ function Partnership()
         />
       </div>
     </section>
+        </div>
+        <img src={image}></img>
+        <div className="max-w-screen-xl mx-auto px-28 py-3">
+        <button className=" bg-[#002E5B] text-white font-semibold rounded-md hover:bg-blue-800 transition px-7 py-3">
+        BOOK AN APPOINTMENT
+      </button>
         </div>
         </>
     )

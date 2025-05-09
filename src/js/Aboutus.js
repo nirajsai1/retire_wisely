@@ -1,9 +1,140 @@
 import React from "react";
+import Madhusudhan from "../images/mb_big.jpeg";
 function Aboutus()
 {
     return(
         <>
-        <p>Aboutus</p>
+        <div className="max-w-screen-xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-start pt-16 pr-4">
+        <div className="flex flex-col items-center text-center md:text-left">
+          <img
+            src={Madhusudhan}
+            alt="Madhusudana Budati"
+            className="w-72 h-auto object-cover shadow-md"
+          />
+          <h2 className="mt-6 text-2xl font-bold text-[#002E5B]">Madhusudana Budati</h2>
+          <p className="text-gray-600 text-sm mt-1">CEO/President</p>
+        </div>
+        <div className="space-y-6 text-gray-800 text-sm text-justify pb-16 ">
+          <p>
+            Welcome to <strong className="text-[#002E5B]">Retire Wisely Financial Services Inc</strong>, where we are
+            committed to helping our clients achieve their financial goals and plan for a comfortable retirement. Our
+            team of experienced financial professionals provides a range of services, including wealth building,
+            financial planning, investment advice, retirement planning, business planning, and estate planning.
+          </p>
+          <p>
+            Our wealth-building services are designed to help you grow and protect your assets. We offer a variety of
+            investment strategies, including stocks, bonds, mutual funds, and exchange-traded funds (ETFs), to help you
+            create a diversified portfolio that aligns with your investment objectives and risk tolerance. Our
+            investment advisors monitor your portfolio on an ongoing basis to ensure it remains aligned with your goals
+            and objectives.
+          </p>
+          <p>
+            We also offer financial planning services to help you make informed financial decisions. Our financial
+            planners work with you to create a comprehensive financial plan that takes into account your income,
+            expenses, debt, and savings. We provide guidance on budgeting, debt management, and tax planning, among
+            other topics, to help you achieve your financial goals.
+          </p>
+          <div className="border-l-4 border-green-600 bg-white p-4  text-gray-700 shadow-sm">
+            <p>
+              We understand that each of our clients has unique financial needs and objectives, which is why we take a
+              personalized approach to every engagement. We take the time to understand your current financial
+              situation, your future goals, and your risk tolerance before creating a customized plan that will help
+              you achieve your objectives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10">
+      {/* Left Column: Mission, Vision, Why Choose Us */}
+      <div>
+        <section className="mb-8">
+          <h3 className="text-green-600 font-bold text-xl uppercase">Our Mission</h3>
+          <p className="text-gray-500 text-lg mb-2">Create Wealth for Families</p>
+          <blockquote className="border-l-4 border-green-600 bg-gray-100 p-4 text-gray-800">
+            Empowering financial success through personalized guidance, education, and solutions.
+            Trust, navigate complexity, optimize wealth for client goals.
+          </blockquote>
+        </section>
+
+        <section className="mb-8">
+          <h3 className="text-green-600 font-bold text-xl uppercase">Our Vision</h3>
+          <p className="text-gray-500 text-lg mb-2">Lead Consumer Empowerment Revolution</p>
+          <blockquote className="border-l-4 border-teal-500 bg-gray-100 p-4 text-gray-800">
+            Empowering financial prosperity our vision for a secure future guiding your journey to
+            financial success with trust and innovation for client goals.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-blue-900 mb-4">Why Choose Us</h2>
+          <p className="text-gray-700 leading-relaxed">
+            At Retire Wisely Financial Services Inc, we recognize the importance of retirement
+            planning. Our retirement planning services are designed to help you prepare for a
+            comfortable retirement. We help you determine your retirement income needs, develop a
+            plan to achieve those needs, and provide ongoing guidance and support as you work
+            towards your retirement goals. <br/>
+            For business owners, we offer business planning services to help you manage and grow your business. We assist with financial analysis, strategic planning, risk management, and other areas that are critical to the success of your business.
+          </p>
+        </section>
+      </div>
+
+      {/* Right Column: Form */}
+      <div className="bg-gray-100 p-6 rounded-md">
+        <h2 className="text-2xl font-bold text-center text-blue-900 mb-6">Book An Appointment</h2>
+        <form className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">First Name</label>
+            <input
+              type="text"
+              placeholder="First Name"
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Last Name</label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Email *</label>
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">How Can We Call You Back?</label>
+            <input
+              type="tel"
+              placeholder="Phone"
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">
+              Do you have any additional questions?
+            </label>
+            <textarea
+              placeholder="Your message..."
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+              rows="3"
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-gray-800 text-white py-3 rounded-md font-semibold "
+          >
+            Submit Your Request
+          </button>
+        </form>
+      </div>
+    </div>
         </>
     );
 }

@@ -1,11 +1,152 @@
+import React from "react";
+import { useState } from "react";
+import faq_image from "../../images/faq_image.png";
 const Faq = () =>
 {
+    const faqs = [
+        {
+          question: 'Why Retirewisely Financial Services?',
+          answer:
+            'We are a fastest growing full-fledged independent financial services marketing company offering Investments, Real Estate, Retirement, Insurance, and Estate Planning from reputable companies (Fortune 100) from Wallstreet. We are like one stop shop.',
+        },
+        { question: 'What is a Financial Planning?' ,
+            answer:
+            'Financial planning is a step-by-step approach to meet one’s life goals. A financial plan acts as a guide as you go through life’s journey. Essentially, it helps you be in control of your income, expenses, investments, taxes, protection, wealth building and preserving wealth such that you can manage your money and achieve your goals.'
+        },
+        { question: 'Why you should work with a Financial Professional?',
+            answer:'Financial Professionals provide a broad range of financial services and offer and educate clients on a variety of money topics from life insurance to the various diversified wealth building strategies and solutions. They recommend products and services, and may assist with opening or managing accounts.'
+         },
+        { question: 'What is Estate Planning?',
+            answer:'That is estate planning – planning in advance, naming the people or organizations you want to receive the things you own after you die, and taking steps now to make carrying out your plan as easy as possible later. However, good estate planning is much more than that. It should also do the following:'
+         },
+        { question: 'Why Estate Planning so important?' },
+        { question: 'What is a Last Will & Testament?' },
+        { question: 'Why is a Living Trust?' },
+        { question: 'What are the 6 steps in the estate planning process?' },
+        { question: 'What is Protection Planning?' },
+      ];
+      const [activeIndex, setActiveIndex] = useState();
+
+  const toggle = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
     return(
         <>
-        <h1>Unlocking Financial Insights: The Power of Financial Calculators</h1>
-<p>Financial calculators offer individuals the opportunity to explore “what-if” scenarios, enabling them to make informed decisions based on their unique financial circumstances. They serve as valuable tools for both individuals seeking to manage their personal finances and professionals working in financial planning, investment management, banking, and related fields.
-</p>
+        <img src={faq_image}></img>
+        <div className="max-w-4xl mx-auto p-6">
+      <h1 className="text-4xl font-bold text-blue-900 mb-6">Inquire And Discover:</h1>
+      <div className="bg-gray-100 rounded-md overflow-hidden">
+        {faqs.map((faq, index) => (
+          <div key={index}>
+            <button
+              onClick={() => toggle(index)}
+              className="w-full flex items-center justify-between px-6 py-4 bg-gray-300 border-b border-gray-200 text-left focus:outline-none"
+            >
+              <span className="font-semibold text-blue-900">{faq.question}</span>
+              <span className="text-green-600 font-bold text-xl">
+                {activeIndex === index ? '-' : '+'}
+              </span>
+            </button>
+            {activeIndex === index && faq.answer && (
+              <div className="px-6 py-4 text-blue-900 bg-gray-100">
+                {faq.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10">
+      {/* Left Column: Mission, Vision, Why Choose Us */}
+      <div>
+        <section className="mb-8">
+          <h3 className="text-green-600 font-bold text-xl uppercase">Our Mission</h3>
+          <p className="text-gray-500 text-lg mb-2">Create Wealth for Families</p>
+          <blockquote className="border-l-4 border-green-600 bg-gray-100 p-4 text-gray-800">
+            Empowering financial success through personalized guidance, education, and solutions.
+            Trust, navigate complexity, optimize wealth for client goals.
+          </blockquote>
+        </section>
 
+        <section className="mb-8">
+          <h3 className="text-green-600 font-bold text-xl uppercase">Our Vision</h3>
+          <p className="text-gray-500 text-lg mb-2">Lead Consumer Empowerment Revolution</p>
+          <blockquote className="border-l-4 border-teal-500 bg-gray-100 p-4 text-gray-800">
+            Empowering financial prosperity our vision for a secure future guiding your journey to
+            financial success with trust and innovation for client goals.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-blue-900 mb-4">Why Choose Us</h2>
+          <p className="text-semibold text-sm text-gray-700 leading-relaxed">
+            At Retire Wisely Financial Services Inc, we recognize the importance of retirement
+            planning. Our retirement planning services are designed to help you prepare for a
+            comfortable retirement. We help you determine your retirement income needs, develop a
+            plan to achieve those needs, and provide ongoing guidance and support as you work
+            towards your retirement goals.
+          </p>
+          <p className="text-semibold text-sm text-gray-700 leading-relaxed">
+          For business owners, we offer business planning services to help you manage and grow your business. We assist with financial analysis, strategic planning, risk management, and other areas that are critical to the success of your business.
+          </p>
+        </section>
+      </div>
+
+      {/* Right Column: Form */}
+      <div className="bg-gray-100 p-6 rounded-md">
+        <h2 className="text-2xl font-bold text-center text-blue-900 mb-6">Book An Appointment</h2>
+        <form className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">First Name</label>
+            <input
+              type="text"
+              placeholder="First Name"
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Last Name</label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Email *</label>
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">How Can We Call You Back?</label>
+            <input
+              type="tel"
+              placeholder="Phone"
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">
+              Do you have any additional questions?
+            </label>
+            <textarea
+              placeholder="Your message..."
+              className="w-full p-3 bg-gray-200 rounded-md outline-none"
+              rows="3"
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-[#002E5B] text-white py-3 rounded-md font-semibold "
+          >
+            Submit Your Request
+          </button>
+        </form>
+      </div>
+    </div>
         </>
     );
 }
