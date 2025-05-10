@@ -1,4 +1,5 @@
 import React, { useState ,useRef , useEffect} from "react";
+import { CalendarPlus ,Clock } from "lucide-react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Book_an_appointment from "./js/Book_an_appointment";
@@ -19,7 +20,9 @@ import College_planning from "./js/quick_links/College_planning";
 import Retirement_planning from "./js/quick_links/Retirement_planning";
 import Tax_planning from "./js/quick_links/Tax_planning";
 import Privacy_policy from "./js/Privacy_policy";
-import { Our_blog } from "./js/Our_blog";
+import  {Our_blog}  from "./js/Our_blog";
+import baa_logo from "./images/baa_logo.png";
+import whatsapp from "./images/whatsapp_icon.png";
 function App() {
   const navigate=useNavigate();
   const [isOpen, setIsOpen] = useState(false);
@@ -50,13 +53,23 @@ function App() {
   }
   return (
       <div>
-        <div className="bg-[#1bcb81] p-5 flex justify-center items-center gap-x-8 text-white text-sm w-full z-10">
-          <button className="font-semibold" onClick={() =>navigate('/baa')}>BOOK APPOINTMENT</button>
+        <div className="bg-[#1bcb81] p-4  flex justify-center items-center gap-x-8 text-white text-sm w-full z-10">
+          <div 
+  className="flex items-center px-4 py-2 cursor-pointer transition 
+             hover:bg-[#002E5B] hover:rounded-xl hover:border hover:border-[#002E5B]"
+  onClick={() => navigate('/baa')}
+>
+  <CalendarPlus className="text-white" />
+  <span className="font-semibold pl-3 text-white">BOOK APPOINTMENT</span>
+</div>
           <div className="flex items-center gap-x-2">
-            <img src={clock} className="w-5 h-5" alt="clock" />
+          <Clock className="w-5 h-5"></Clock>
             <p>8 AM to 6 PM - Monday to Friday</p>
           </div>
-          <p>Chat on WhatsApp with +1 (484) 467-4744</p>
+          <div className="flex">
+            <img src={whatsapp} className="pr-3"></img>
+            <p className="">Chat on WhatsApp with +1 (484) 467-4744</p>
+          </div>
         </div>
         <div className="sticky top-0 bg-white shadow z-20">
           <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3">
@@ -131,7 +144,7 @@ function App() {
         <footer className="bg-[#002e5b] text-white">
       <div className="bg-[#19e49a] px-6 py-4 flex flex-col sm:flex-row justify-between items-center">
         <h2 className="text-xl sm:text-2xl font-bold">Looking For A Financial Consultant?</h2>
-        <button className="mt-3 sm:mt-0 bg-[#002e5b] hover:bg-[#001f3d] text-white font-semibold px-6 py-2 rounded shadow">
+        <button onClick={() =>navigate('/baa')} className="mt-3 sm:mt-0 bg-[#002e5b] hover:bg-[#001f3d] text-white font-semibold px-6 py-2 rounded shadow">
           BOOK AN APPOINTMENT
         </button>
       </div>
@@ -170,15 +183,15 @@ function App() {
             <li><Link to='/resources'>Resources</Link></li>
             <li><Link to='/contactus'>Contactus</Link></li>
             <li><Link to='/pp'>Privacy Policy</Link></li>
-            <li>Book an Appointment</li>
+            <li><Link to='/baa'>Book an Appointment</Link></li>
             <li><Link to='/our_blog'>Our Blog</Link></li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-gray-400 py-4 px-6 flex flex-col sm:flex-row justify-between items-center text-gray-400 text-sm">
-        <p>© 2025 Retire Wisely Financial Services Inc.</p>
-        <div className="flex gap-4 mt-3 sm:mt-0">
+        <p className="pl-40">© 2025 Retire Wisely Financial Services Inc.</p>
+        <div className="flex gap-4 mt-3 sm:mt-0 pr-40">
           <a href="#" className="bg-white text-[#002e5b] p-2 rounded-full"></a>
           <a href="#" className="bg-white text-[#002e5b] p-2 rounded-full"></a>
         </div>
