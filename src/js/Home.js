@@ -3,7 +3,7 @@ import { useState } from "react";
 import Homepage from "../images/Homepage.png";
 import consulting from "../images/consulting.png";
 import partnership from "../images/partnership.png";
-import services from "../images/services.png";
+import services_img from "../images/services.png";
 import retirewisely from "../images/retire_wisely.png";
 import background from "../images/background.png";
 import estate from "../images/Estate_planing.png";
@@ -12,7 +12,40 @@ import retirement from "../images/Retirement_planing.jpg";
 import List_of_products from "../images/List_of_products.png";
 import mb from "../images/mb_big.jpeg";
 import { Handshake } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function Home() {
+  const services = [
+  {
+    title: "Estate Planning (Will & Trust)",
+    description:
+      "Estate planning is the process of anticipating and arranging for the management and disposal of a person’s estate during the person’s life in preparation for a person’s future incapacity or death. We provide comprehensive will & trust estate planning.",
+    image: estate,
+  },
+  {
+    title: "Retirement Planning",
+    description:
+      "Retirement planning doesn’t take Age but making your money work for you when your job income stops. Retirement planning doesn’t take age but making your money work for you when your job income stops. Retirement planning doesn’t take age but making your money work for you when your job income stops",
+    image: retirement,
+  },
+  {
+    title: "Insurance Planning",
+    description:
+      "Insurance planning is an essential part of an effective financial plan that includes assessing risks and selecting the best insurance products to mitigate those risks. Insurance can help alleviate financial burdens that often occur when unexpected circumstances arise, safeguarding your home, income, and other assets.",
+    image: insurance,
+  },
+];
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  const navigate=useNavigate();
   return (
     <div>
       <img src={Homepage} alt="Home page image" className="w-full" />
@@ -36,15 +69,19 @@ function Home() {
         <div className="max-w-screen-xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-center items-center gap-10">
             <div className="text-center">
-              <img src={consulting} alt="Consulting" className="max-h-[300px] max-w-[300px] mx-auto mb-4 shadow-lg" />
-              <h2 className="text-xl font-bold text-gray-900">Consulting</h2>
-            </div>
+  <img
+    src={consulting}
+    alt="Consulting"
+    className="max-h-[300px] max-w-[300px] mx-auto mb-4 shadow-lg border-t-2 border-l-2 border-r-2 border-b-4 border-transparent hover:border-b-green-500 transition duration-300"
+  />
+  <h2 className="text-xl font-bold text-gray-900">Consulting</h2>
+</div>
             <div className="text-center">
-              <img src={services} alt="Services" className="max-h-[300px] max-w-[300px] mx-auto mb-4 shadow-lg" />
+              <img src={services_img} alt="Services" className="max-h-[300px] max-w-[300px] mx-auto mb-4 shadow-lg border-t-2 border-l-2 border-r-2 border-b-4 border-transparent hover:border-b-green-500 transition duration-300" />
               <h2 className="text-xl font-bold text-gray-900">Services</h2>
             </div>
             <div className="text-center">
-              <img src={partnership} alt="Partnership" className="max-h-[300px] max-w-[300px] mx-auto mb-4 shadow-lg" />
+              <img src={partnership} alt="Partnership" className="max-h-[300px] max-w-[300px] mx-auto mb-4 shadow-lg border-t-2 border-l-2 border-r-2 border-b-4 border-transparent hover:border-b-green-500 transition duration-300" />
               <h2 className="text-xl font-bold text-gray-900">Partnership</h2>
             </div>
           </div>
@@ -56,16 +93,16 @@ function Home() {
         <img
           src={retirewisely}
           alt="RetireWisely Financial Services"
-          className="w-full h-auto object-cover rounded shadow-md"
+          className="w-full h-auto  rounded "
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center rounded">
+        <div className="absolute   flex items-center justify-center rounded">
         </div>
       </div>
       <div className="w-full md:w-1/2">
-        <h2 className="text-3xl font-semibold text-blue-900 mb-4">
+        <h2 className="text-3xl font-semibold text-[#002E5B] mb-4">
           Why Retire Wisely Financial Services?
         </h2>
-        <p className="text-gray-800 leading-relaxed">
+        <p className="text-[#002E5B] text-sm leading-relaxed">
           RetireWisely is an independent financial services marketing company that is bringing Wall Street to Main Street and 
           also giving an equal Business Opportunity who has dream of owning their own financial services agency. 
           No matter what financial challenges clients may face, RetireWisely has the experience and resources to create 
@@ -77,8 +114,30 @@ function Home() {
       </div>
     </div>
     <img src={background}></img>
+    <div className="w-full bg-gray-100 py-10">
+      <h2 className="text-3xl font-bold text-center mb-6 text-[#002E5B]">Our Services</h2>
+      <Slider {...settings} className="max-w-6xl mx-auto">
+        {services.map((service, index) => (
+          <div className="flex w-1/2">
+          <div key={index} className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-md">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-[800px] h-[500px]"
+            />
+            <div className="pl-5 bg-gray-100 pr-5">
+              <h3 className="text-xl font-semibold text-[#002E5B] mb-4">{service.title}</h3>
+              <p className="text-[#002E5B] text-sm font-serif pt-2 pb-2 mb-6">{service.description}</p>
+              <button className="bg-[#002E5B] hover:bg-[#1bcb81] text-white px-6 py-2 rounded font-semibold" onClick={() => navigate('/services')}>
+                More Services
+              </button>
+              </div>
+          </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
     <div className="bg-white text-gray-800">
-      {/* Team Section */}
       <section className="max-w-screen-xl mx-auto px-24 py-16 ">
         <div className="flex gap-10 ">
         <h2 className="text-4xl font-light text-gray-700 mb-2">Meet Our Team</h2>
@@ -88,16 +147,13 @@ function Home() {
         </p>
         </div>
         <div className="flex flex-col md:flex-row items-start md:items-center gap-10">
-          {/* Image */}
           <div className="w-full md:w-60">
             <img
-              src={mb} // Replace with your image path
+              src={mb} 
               alt="Madhu Budati"
               className="w-full rounded-lg shadow-md"
             />
           </div>
-
-          {/* Info Box */}
           <div className="flex-1">
             <h3 className="text-2xl font-bold text-blue-900">Madhu Budati</h3>
             <p className="text-lg text-gray-500 mb-4">CEO/President</p>
@@ -107,14 +163,12 @@ function Home() {
                 agency. Madhusudana has 20+ years of corporate…
               </p>
             </div>
-            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-md transition">
+            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-md transition" onClick={() =>navigate('/psection')}>
               VIEW PROFILE
             </button>
           </div>
         </div>
       </section>
-
-      {/* Product Providers Section */}
       <section className="bg-white px-6 md:px-20 py-12 border-t">
         <div className="flex items-center gap-4 max-w-screen-xl mx-auto px-28 py-12">
           <div className="p-2 rounded-md bg-green-100 text-green-600">

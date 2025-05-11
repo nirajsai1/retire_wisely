@@ -31,7 +31,6 @@ const Useful_Links = () =>
         <>
         <section className="bg-gray-300 py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-        {/* Left Side: Text */}
         <div className="flex-1 max-w-screen-xl mx-auto px-20 py-3">
           <h2 className="text-4xl font-bold text-gray-700 mb-6 leading-snug">
             Unlocking Financial Insights: Useful links
@@ -41,8 +40,6 @@ const Useful_Links = () =>
             estimate future investment growth, and assess the impact of fees and taxes.
           </p>
         </div>
-
-        {/* Right Side: Image */}
         <div className="flex-1">
           <div className="shadow-lg border border-gray-200">
             <img 

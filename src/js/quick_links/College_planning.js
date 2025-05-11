@@ -9,7 +9,6 @@ export const  College_planning = () =>
               <h1 className="text-3xl font-bold text-blue-900  px-48">College Planning</h1>
                 </div>
                 <div className="flex flex-col md:flex-row max-w-screen-xl mx-auto px-20 py-3 font-serif pt-16 pb-20">
-              {/* Left Column */}
               <div className="flex-1 px-8 py-6">
                 <p className="text-sm text-[#1a1a1a] mb-6">
                 Our College Planning Services aims to help students achieve their academic objectives. Our program is dedicated to supporting students in their pursuit of higher education by offering expert guidance and resources. With our assistance, students can overcome any obstacles that may hinder their college journey and reach their full potential.
@@ -29,8 +28,6 @@ Personal impact, mentoring, and teamwork are just a few of the benefits of build
                 </p>
                 
               </div>
-        
-              {/* Right Sidebar */}
               <div className="w-full md:w-[320px] bg-white border-l border-gray-200">
                 <div className="border-b">
                   <div className="px-6 py-4 font-semibold text-green-600 border-b border-white-300 bg-gray-100 cursor-pointer" onClick={() => navigate('/retirement_p')}>Retirement planning</div>

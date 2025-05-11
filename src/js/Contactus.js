@@ -29,13 +29,11 @@ function Contactus()
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form data (e.g., send to API)
     console.log(formData);
   };
     return(
         <>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-20 py-20">
-  {/* Image */}
   <div className="h-[400px] flex items-center justify-center">
     <img
       src={close_the_sale}
@@ -43,8 +41,6 @@ function Contactus()
       className="shadow-lg h-full w-full object-cover"
     />
   </div>
-
-  {/* Map */}
   <div className="h-[400px]">
     <iframe
       src="https://www.google.com/maps?q=116+Foreside+Rd,+Malvern,+PA+19355&output=embed"
@@ -55,8 +51,6 @@ function Contactus()
       className="shadow-lg border w-full h-full"
     ></iframe>
   </div>
-
-  {/* Contact Card */}
   <div className="h-[400px]">
     <Card className="h-full flex flex-col justify-between shadow-lg !rounded-none">
       <CardContent className="h-full flex flex-col justify-between">

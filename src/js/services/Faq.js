@@ -68,7 +68,6 @@ const Faq = () =>
       </div>
     </div>
     <div className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10">
-      {/* Left Column: Mission, Vision, Why Choose Us */}
       <div>
         <section className="mb-8">
           <h3 className="text-green-600 font-bold text-xl uppercase">Our Mission</h3>
@@ -102,8 +101,6 @@ const Faq = () =>
           </p>
         </section>
       </div>
-
-      {/* Right Column: Form */}
       <div className="bg-gray-100 p-6 rounded-md">
         <h2 className="text-2xl font-bold text-center text-blue-900 mb-6">Book An Appointment</h2>
         <form className="space-y-4">

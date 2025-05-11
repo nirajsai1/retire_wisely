@@ -1,7 +1,7 @@
 import React, { useState ,useRef , useEffect} from "react";
 import { CalendarPlus ,Clock } from "lucide-react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , useLocation } from "react-router-dom";
 import Book_an_appointment from "./js/Book_an_appointment";
 import Home from "./js/Home";
 import Aboutus from "./js/Aboutus";
@@ -23,6 +23,8 @@ import Privacy_policy from "./js/Privacy_policy";
 import  {Our_blog}  from "./js/Our_blog";
 import baa_logo from "./images/baa_logo.png";
 import whatsapp from "./images/whatsapp_icon.png";
+import ProfileSection from "./js/ProfileSection";
+import ScrollToTop from "./js/ScrollToTop";
 function App() {
   const navigate=useNavigate();
   const [isOpen, setIsOpen] = useState(false);
@@ -34,10 +36,8 @@ function App() {
   };
 
   const handleOptionClick = () => {
-    setDropdownOpen(false); // Close on click
+    setDropdownOpen(false); 
   };
-
-  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -51,6 +51,11 @@ function App() {
   {
     navigate('/')
   }
+   const location = useLocation();
+   const isActive = (path) => location.pathname === path;
+
+  const activeClass = "text-green-500"; 
+  const defaultClass = "[#002E5B]"; 
   return (
       <div>
         <div className="bg-[#1bcb81] p-4  flex justify-center items-center gap-x-8 text-white text-sm w-full z-10">
@@ -71,56 +76,69 @@ function App() {
             <p className="">Chat on WhatsApp with +1 (484) 467-4744</p>
           </div>
         </div>
-        <div className="sticky top-0 bg-white shadow z-20">
-          <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3">
+        <div className="sticky top-0 bg-white shadow z-20 text-[#002E5B]">
+          <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3 text-[#002E5B]">
             <img src={image} alt="Logo" className="flex-[3] max-w-[180px] mr-32 ml-16 cursor-pointer" onClick={handlenav}  />
             <div className="flex flex-[2] gap-x-12 text-sm font-semibold">
-              <Link to="/">HOME</Link>
-              <Link to="/aboutus">ABOUT US</Link>
-              <Link to="/services">SERVICES</Link>
-              <div className="relative group inline-block">
-              <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={toggleDropdown}
-              className="font-semibold text-sm focus:outline-none"
-            >
-              RESOURCES
-            </button>
-            {dropdownOpen && (
-              <div className="absolute bg-white shadow-lg mt-2 rounded-md z-30 w-40">
-                <Link
-                  to="/fc"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  onClick={handleOptionClick}
-                >
-                  Financial Calculators
-                </Link>
-                <Link
-                  to="/useful_links"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  onClick={handleOptionClick}
-                >
-                 Useful Links 
-                </Link>
-                <Link
-                  to="/faq"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  onClick={handleOptionClick}
-                >
-                  Frequently Asked Questions
-                </Link>
-              </div>
-            )}
-          </div>
-    </div>
-              <Link to="/partnership">PARTNERSHIP</Link>
-              <Link to="/contactus">CONTACT US</Link>
-                      <div className="flex gap-4">
-              <img src={facebook}  className="w-5 h-5"></img>
-              <img src={instagram} className="w-5 h-5"></img>
-              </div>
+      <Link to="/" className={isActive("/") ? activeClass : defaultClass}>
+        HOME
+      </Link>
+      <Link to="/aboutus" className={ isActive("/aboutus") ? activeClass : defaultClass}>
+        ABOUT US
+      </Link>
+      <Link to="/services" className={isActive("/services") ? activeClass : defaultClass}>
+        SERVICES
+      </Link>
+
+      <div className="relative group inline-block">
+        <div className="relative" ref={dropdownRef}>
+          <button
+            onClick={toggleDropdown}
+            className={`font-semibold text-sm focus:outline-none ${isActive("/fc") || isActive("/useful_links") || isActive("/faq") ? activeClass : defaultClass}`}
+          >
+            RESOURCES
+          </button>
+          {dropdownOpen && (
+            <div className="absolute bg-white shadow-lg mt-2 rounded-md z-30 w-40">
+              <Link
+                to="/fc"
+                className="block px-4 py-2 hover:bg-gray-100"
+                onClick={handleOptionClick}
+              >
+                Financial Calculators
+              </Link>
+              <Link
+                to="/useful_links"
+                className="block px-4 py-2 hover:bg-gray-100"
+                onClick={handleOptionClick}
+              >
+                Useful Links
+              </Link>
+              <Link
+                to="/faq"
+                className="block px-4 py-2 hover:bg-gray-100"
+                onClick={handleOptionClick}
+              >
+                Frequently Asked Questions
+              </Link>
             </div>
-          </div>
+          )}
+        </div>
+      </div>
+
+      <Link to="/partnership" className={isActive("/partnership") ? activeClass : defaultClass}>
+        PARTNERSHIP
+      </Link>
+      <Link to="/contactus" className={isActive("/contactus") ? activeClass : defaultClass}>
+        CONTACT US
+      </Link>
+
+      <div className="flex gap-4">
+        <img src={facebook} className="w-5 h-5" alt="Facebook" />
+        <img src={instagram} className="w-5 h-5" alt="Instagram" />
+      </div>
+    </div>
+            </div>
         </div>
         <div className="pt-6">
           <Routes>
@@ -139,6 +157,7 @@ function App() {
             <Route path='/pp' element={<Privacy_policy/>}></Route>
             <Route path='/our_blog' element={<Our_blog></Our_blog>}></Route>
             <Route path='/baa' element={<Book_an_appointment></Book_an_appointment>}></Route>
+            <Route path='/psection' element={<ProfileSection/>}></Route>
           </Routes>
         </div>
         <footer className="bg-[#002e5b] text-white">
