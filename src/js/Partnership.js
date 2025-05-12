@@ -1,8 +1,10 @@
 import React from "react";
 import partnership from "../images/partnership_1.jpg";
 import image from "../images/image.png";
+import { useNavigate } from "react-router-dom";
 function Partnership()
 {
+  const navigate=useNavigate();
   const bulletPoints = [
     "No Major Investment",
     "No Franchise Fees",
@@ -40,9 +42,19 @@ function Partnership()
       </div>
     </section>
         </div>
-        <img src={image}></img>
-        <div className="max-w-screen-xl mx-auto px-28 py-3">
-        <button className=" bg-[#002E5B] text-white font-semibold rounded-md hover:bg-blue-800 transition px-7 py-3">
+        <div className=" max-w-screen-xl mx-auto px-20 py-3" >
+          <h1 className="text-3xl text-[#002E5B] text-extrabold pt-4 pb-4">WE OFFER A RISK-FREE BUSINESS OPPORTUNITY...</h1>
+          <ul className="space-y-2 text-[#002E5B]">
+        {
+            bulletPoints.map((item,ind) =>
+            (
+              <li>&#9675;  {item}</li>
+            ))
+        }
+        </ul>
+        </div>
+        <div className="max-w-screen-xl mx-auto px-20 py-3">
+        <button className=" bg-[#002E5B] text-white font-semibold rounded-md hover:bg-[#1bcb81] transition px-7 py-3" onClick={() =>navigate('/baa')}>
         BOOK AN APPOINTMENT
       </button>
         </div>
