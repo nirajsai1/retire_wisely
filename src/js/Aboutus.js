@@ -11,27 +11,27 @@ function Aboutus()
         <img
           src={Madhusudhan}
           alt="Madhusudana Budati - CEO/President"
-          className="w-72 h-auto object-cover shadow-md rounded-full"
+          className="w-72 h-auto object-cover shadow-md rounded-full mx-auto md:mx-0"
         />
         <h2 className="mt-6 text-2xl font-bold text-[#002E5B]">Madhusudana Budati</h2>
         <p className="text-gray-600 text-sm mt-1">CEO / President</p>
       </div>
 
       <div className="space-y-6 text-gray-800 text-sm text-justify pb-16">
-        <p>
+        <p className="pl-4 md:pl-0">
           Welcome to <strong className="text-[#002E5B]">Retire Wisely Financial Services Inc</strong>, where we are
           committed to helping our clients achieve their financial goals and plan for a comfortable retirement. Our
           team of experienced financial professionals provides a range of services, including wealth building,
           financial planning, investment advice, retirement planning, business planning, and estate planning.
         </p>
-        <p>
+        <p className="pl-4 md:pl-0">
           Our wealth-building services are designed to help you grow and protect your assets. We offer a variety of
           investment strategies, including stocks, bonds, mutual funds, and exchange-traded funds (ETFs), to help you
           create a diversified portfolio that aligns with your investment objectives and risk tolerance. Our
           investment advisors monitor your portfolio on an ongoing basis to ensure it remains aligned with your goals
           and objectives.
         </p>
-        <p>
+        <p className="pl-4 md:pl-0">
           We also offer financial planning services to help you make informed financial decisions. Our financial
           planners work with you to create a comprehensive financial plan that takes into account your income,
           expenses, debt, and savings. We provide guidance on budgeting, debt management, and tax planning, among
