@@ -64,27 +64,46 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
   const defaultClass = "[#002E5B]"; 
   return (
       <div>
-       <div className="bg-[#1bcb81] p-2 md:p-3 flex justify-center items-center gap-3 md:gap-8 text-white text-xs md:text-sm w-full z-10">
+       <div className="hidden md:flex bg-[#1bcb81] p-3 justify-center items-center gap-8 text-white text-sm w-full z-10">
+        <div 
+          className="flex items-center px-4 py-2 cursor-pointer transition hover:bg-[#002E5B] hover:rounded-xl hover:border hover:border-[#002E5B] whitespace-nowrap"
+          onClick={() => navigate('/baa')}
+        >
+          <CalendarPlus className="text-white w-5 h-5" />
+          <span className="font-semibold pl-3 text-white">BOOK APPOINTMENT</span>
+        </div>
 
-  <div 
-    className="flex items-center px-2 md:px-4 py-1 md:py-2 cursor-pointer transition hover:bg-[#002E5B] hover:rounded-xl hover:border hover:border-[#002E5B] whitespace-nowrap"
-    onClick={() => navigate('/baa')}
-  >
-    <CalendarPlus className="text-white w-4 h-4 md:w-5 md:h-5" />
-    <span className="font-semibold pl-2 md:pl-3 text-white">BOOK APPOINTMENT</span>
-  </div>
+        <div className="flex items-center gap-2 whitespace-nowrap">
+          <Clock className="w-5 h-5" />
+          <p>8 AM to 6 PM - Monday to Friday</p>
+        </div>
 
-  <div className="flex items-center gap-1 md:gap-2 whitespace-nowrap">
-    <Clock className="w-4 h-4 md:w-5 md:h-5" />
-    <p>8 AM to 6 PM - Monday to Friday</p>
-  </div>
+        <div className="flex items-center whitespace-nowrap">
+          <FaWhatsapp className="w-7 h-7 pr-2" />
+          <p>Chat on WhatsApp with +1 (484) 467-4744</p>
+        </div>
+      </div>
 
-  <div className="flex items-center whitespace-nowrap">
-    <FaWhatsapp className="w-5 h-5 md:w-7 md:h-7 pr-1 md:pr-2" />
-    <p className="">Chat on WhatsApp with +1 (484) 467-4744</p>
-  </div>
+      {/* Mobile Version */}
+      <div className="flex md:hidden bg-[#1bcb81] px-2 py-2 items-center gap-2 text-white text-[10px] w-full overflow-x-auto whitespace-nowrap scrollbar-none">
+        <div 
+          className="flex items-center px-2 py-1 cursor-pointer transition hover:bg-[#002E5B] hover:rounded-lg hover:border hover:border-[#002E5B]"
+          onClick={() => navigate('/baa')}
+        >
+          <CalendarPlus className="text-white w-3.5 h-3.5" />
+          <span className="font-semibold pl-1">BOOK</span>
+        </div>
 
-</div><div className="sticky top-0 bg-white shadow z-20 text-[#002E5B]">
+        <div className="flex items-center gap-1">
+          <Clock className="w-3.5 h-3.5" />
+          <p className="leading-none">8–6 Mon–Fri</p>
+        </div>
+
+        <div className="flex items-center gap-1">
+          <FaWhatsapp className="w-4 h-4" />
+          <p className="leading-none">WhatsApp +1 (484)...</p>
+        </div>
+      </div><div className="sticky top-0 bg-white shadow z-20 text-[#002E5B]">
   <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3 text-[#002E5B]">
     {/* Logo */}
     <img
