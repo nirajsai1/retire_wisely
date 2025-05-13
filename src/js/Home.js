@@ -27,7 +27,7 @@ function Home() {
   {
     title: "Retirement Planning",
     description:
-      "Retirement planning doesn’t take Age but making your money work for you when your job income stops. Retirement planning doesn’t take age but making your money work for you when your job income stops. Retirement planning doesn’t take age but making your money work for you when your job income stops",
+      "Retirement planning doesn’t take Age but making your money work for you when your job income stops.",
     image: retirement,
   },
   {
@@ -75,7 +75,7 @@ const settings = {
             <img
               src={img}
               alt="Feature"
-              className="max-h-[250px] max-w-[250px] mx-auto mb-4 shadow-lg border-t-2 border-l-2 border-r-2 border-b-4 border-transparent hover:border-b-green-500 transition duration-300"
+              className="max-h-[350px] max-w-[350px] mx-auto mb-4 shadow-lg border-t-2 border-l-2 border-r-2 border-b-4 border-transparent hover:border-b-green-500 transition duration-300"
             />
             <h2 className="text-xl font-bold text-gray-900">
               {['Consulting', 'Services', 'Partnership'][idx]}
@@ -165,12 +165,12 @@ const settings = {
       </div>
     </section>
 
-    <section className="bg-white px-4 md:px-20 py-12 border-t">
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-4">
-        <div className="p-2 rounded-md bg-green-100 text-green-600">
-          <Handshake className="w-10 h-10" />
+    <section className="bg-white px-4 md:px-20 py-12 border-t ">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-4 md: pl-28">
+        <div className="p-2 rounded-md bg-green-100 text-green-600 ">
+          <Handshake className="w-10 h-10 " />
         </div>
-        <h2 className="text-3xl font-semibold text-gray-500 text-center md:text-left">
+        <h2 className="text-3xl font-semibold text-gray-500 text-center md:text-left ">
           Our Product Providers
         </h2>
       </div>

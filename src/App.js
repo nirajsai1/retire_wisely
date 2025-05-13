@@ -1,6 +1,6 @@
 import React, { useState ,useRef , useEffect} from "react";
 import { CalendarPlus ,Clock } from "lucide-react";
-import { FaWhatsapp , FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaWhatsapp , FaInstagram, FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useNavigate , useLocation } from "react-router-dom";
 import Book_an_appointment from "./js/Book_an_appointment";
@@ -64,14 +64,13 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
   const defaultClass = "[#002E5B]"; 
   return (
       <div>
-         {/* Desktop Version */}
       <div className="hidden md:flex bg-[#1bcb81] p-3 justify-center items-center gap-8 text-white text-sm w-full z-10">
         <div 
           className="flex items-center px-4 py-2 cursor-pointer transition hover:bg-[#002E5B] hover:rounded-xl hover:border hover:border-[#002E5B] whitespace-nowrap"
           onClick={() => navigate('/baa')}
         >
           <CalendarPlus className="text-white w-5 h-5" />
-          <span className="font-semibold pl-3 text-white">BOOK APPOINTMENT</span>
+          <span className="font-semibold pl-3 text-white">BOOK AN APPOINTMENT</span>
         </div>
 
         <div className="flex items-center gap-2 whitespace-nowrap">
@@ -81,7 +80,7 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
 
         <div className="flex items-center whitespace-nowrap">
           <FaWhatsapp className="w-7 h-7 pr-2" />
-          <p>Chat on WhatsApp with +1 (484) 467-4744</p>
+          <p>Chat on Whatsapp with +1 (484) 467-4744</p>
         </div>
       </div>
 
@@ -150,8 +149,9 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
       <Link to="/contactus" className={isActive("/contactus") ? activeClass : defaultClass}>CONTACT US</Link>
 
       <div className="flex gap-4">
-        <FaFacebook className="w-5 h-5" />
-        <FaInstagram className="w-5 h-5" />
+        
+      <a href="https://www.facebook.com/retirewisly"><FaFacebook className="w-5 h-5" /></a>
+      <a href="https://www.linkedin.com/company/retirewisely"><FaLinkedinIn className="w-5 h-5" /></a>
       </div>
     </div>
   </div>
@@ -188,8 +188,8 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
       CONTACT US
     </Link>
     <div className="flex gap-4 mt-4">
-      <FaFacebook className="w-5 h-5" />
-      <FaInstagram className="w-5 h-5" />
+      <a href="https://www.facebook.com/retirewisly"><FaFacebook className="w-5 h-5" /></a>
+      <a href="https://www.linkedin.com/company/retirewisely"><FaLinkedinIn className="w-5 h-5" /></a>
     </div>
   </div>
 )}
