@@ -97,12 +97,12 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
 
         <div className="flex items-center gap-1">
           <Clock className="w-3.5 h-3.5" />
-          <p className="leading-none">8 AM to 6 PM - Monday to Friday</p>
+          <p className="leading-none">8 to 6 - Mon to Fri</p>
         </div>
 
         <div className="flex items-center gap-1">
           <FaWhatsapp className="w-4 h-4" />
-          <p className="leading-none">Chat on WhatsApp with +1 (484) 467-4744</p>
+          <p className="leading-none">+1 (484) 467-4744</p>
         </div>
       </div><div className="sticky top-0 bg-white shadow z-20 text-[#002E5B]">
   <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3 text-[#002E5B]">
