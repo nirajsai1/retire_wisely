@@ -20,9 +20,9 @@ function Partnership()
     "World-class recognition and reward system",
   ];
     return(
-        <>
-        <div className="bg-gray-50">
-        <section className="flex flex-col md:flex-row  p-10 items-center justify-between max-w-screen-xl mx-auto px-20 py-3">
+       <>
+  <div className="bg-gray-50">
+    <section className="flex flex-col md:flex-row p-10 items-center justify-between max-w-screen-xl mx-auto px-4 md:px-20 py-6">
       <div className="md:w-1/2 mb-8 md:mb-0">
         <h4 className="text-green-600 font-semibold uppercase text-sm mb-4">
           Aspiring for Partnership
@@ -41,24 +41,26 @@ function Partnership()
         />
       </div>
     </section>
-        </div>
-        <div className=" max-w-screen-xl mx-auto px-20 py-3" >
-          <h1 className="text-3xl text-[#002E5B] text-extrabold pt-4 pb-4">WE OFFER A RISK-FREE BUSINESS OPPORTUNITY...</h1>
-          <ul className="space-y-2 text-[#002E5B]">
-        {
-            bulletPoints.map((item,ind) =>
-            (
-              <li>&#9675;  {item}</li>
-            ))
-        }
-        </ul>
-        </div>
-        <div className="max-w-screen-xl mx-auto px-20 py-3">
-        <button className=" bg-[#002E5B] text-white font-semibold rounded-md hover:bg-[#1bcb81] transition px-7 py-3" onClick={() =>navigate('/baa')}>
-        BOOK AN APPOINTMENT
-      </button>
-        </div>
-        </>
+  </div>
+  
+  <div className="max-w-screen-xl mx-auto px-4 md:px-20 py-6">
+    <h1 className="text-3xl text-[#002E5B] text-extrabold pt-4 pb-4">WE OFFER A RISK-FREE BUSINESS OPPORTUNITY...</h1>
+    <ul className="space-y-2 text-[#002E5B]">
+      {
+        bulletPoints.map((item, ind) => (
+          <li key={ind}>&#9675;  {item}</li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div className="max-w-screen-xl mx-auto px-4 md:px-20 py-6">
+    <button className="bg-[#002E5B] text-white font-semibold rounded-md hover:bg-[#1bcb81] transition px-7 py-3 duration-300 ease-in-out" onClick={() => navigate('/baa')}>
+      BOOK AN APPOINTMENT
+    </button>
+  </div>
+</>
+
     )
 }
 export default Partnership;

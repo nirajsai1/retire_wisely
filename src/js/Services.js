@@ -74,42 +74,43 @@ function Services() {
 
   return (
     <>
-      <div className="bg-gray-50">
-        <section className="flex flex-col md:flex-row p-10 justify-between items-center max-w-screen-xl mx-auto px-20 py-3">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <h1 className="text-3xl md:text-4xl text-[#4cbb17] font-semibold leading-tight pb-8">
-              Our Services
-            </h1>
-            <h4 className="text-3xl md:text-xl">
-              We offer wide spectrum of Wealth Building Strategies
-              <br />
-              and Solutions in Asset Protection, Asset Accumulation
-              <br />
-              and Asset Distribution.
-            </h4>
-          </div>
-          <div>
-            <img src={rtp} alt="Retirement Tax Planning" />
-          </div>
-        </section>
+  <div className="bg-gray-50">
+    <section className="flex flex-col md:flex-row p-10 justify-between items-center max-w-screen-xl mx-auto px-6 sm:px-10 py-3">
+      <div className="md:w-1/2 mb-8 md:mb-0">
+        <h1 className="text-3xl md:text-4xl text-[#4cbb17] font-semibold leading-tight pb-8">
+          Our Services
+        </h1>
+        <h4 className="text-xl md:text-xl text-gray-700">
+          We offer a wide spectrum of Wealth Building Strategies
+          <br />
+          and Solutions in Asset Protection, Asset Accumulation
+          <br />
+          and Asset Distribution.
+        </h4>
       </div>
-
-      <div className="py-12 px-4 bg-white text-center">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    {services.map((service, idx) => (
-      <div
-        key={idx}
-        onClick={() => handleClick(idx)}
-        className={`cursor-pointer border-4 p-6 rounded shadow-sm transition-all duration-200 
-            ${selected === idx ? "border-green-600" : "border-[#002E5B] hover:border-green-600"}`}          
-      >
-        <h3 className="text-xl font-bold text-blue-900 mb-4">{service.title}</h3>
-        <p className="text-sm text-gray-700">{service.description}</p>
+      <div className="md:w-1/2">
+        <img src={rtp} alt="Retirement Tax Planning" className="rounded-lg shadow-lg" />
       </div>
-    ))}
+    </section>
   </div>
-</div>
-    </>
+
+  <div className="py-12 px-4 bg-white text-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {services.map((service, idx) => (
+        <div
+          key={idx}
+          onClick={() => handleClick(idx)}
+          className={`cursor-pointer border-4 p-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 
+            ${selected === idx ? "border-green-600 bg-green-50" : "border-[#002E5B] hover:border-green-600 hover:bg-green-50"}`}
+        >
+          <h3 className="text-xl font-bold text-blue-900 mb-4">{service.title}</h3>
+          <p className="text-sm text-gray-700">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</>
+
   );
 }
 

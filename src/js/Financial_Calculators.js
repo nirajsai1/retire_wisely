@@ -73,43 +73,46 @@ function Financial_Calculators()
   ];
     return(
         <>
-         <div className="bg-gray-100  flex items-center justify-center px-4 py-10">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-4xl font-semibold text-gray-700 mb-6">
-            Unlocking Financial Insights: The Power of Financial Calculators
-          </h2>
-          <p className="text-[#002E5B] text-sm leading-relaxed">
-            Financial calculators offer individuals the opportunity to explore “what-if” scenarios,
-            enabling them to make informed decisions based on their unique financial circumstances.
-            They serve as valuable tools for both individuals seeking to manage their personal finances
-            and professionals working in financial planning, investment management, banking, and related fields.
-          </p>
-        </div>
-        <div className="rounded shadow-lg overflow-hidden">
-          <img
-            src={insurance_planning}
-            alt="Team using financial calculator"
-            className="w-full h-auto object-cover"
-          />
-        </div>
+  <div className="bg-gray-100 flex items-center justify-center px-4 py-10">
+    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 className="text-4xl font-semibold text-gray-700 mb-6">
+          Unlocking Financial Insights: The Power of Financial Calculators
+        </h2>
+        <p className="text-[#002E5B] text-sm leading-relaxed">
+          Financial calculators offer individuals the opportunity to explore “what-if” scenarios,
+          enabling them to make informed decisions based on their unique financial circumstances.
+          They serve as valuable tools for both individuals seeking to manage their personal finances
+          and professionals working in financial planning, investment management, banking, and related fields.
+        </p>
+      </div>
+
+      <div className="rounded-lg shadow-lg overflow-hidden">
+        <img
+          src={insurance_planning}
+          alt="Team using financial calculator"
+          className="w-full h-auto object-cover"
+        />
       </div>
     </div>
-    <div className="max-w-screen-xl mx-auto px-20 py-4 bg-white p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 pb-20">
-      {categories.map((category) => (
-        <div key={category.title}>
-          <h2 className="text-2xl font-semibold text-blue-900 mb-4">{category.title}</h2>
-          <ul className="space-y-2">
-            {category.items.map((item, index) => (
-              <li key={index} className="text-sm text-[#002E5B] hover:underline cursor-pointer">
-                &#9675; {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-        </>
+  </div>
+
+  <div className="max-w-screen-xl mx-auto px-4 sm:px-20 py-4 bg-white p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 pb-20">
+    {categories.map((category) => (
+      <div key={category.title} className="space-y-6">
+        <h2 className="text-2xl font-semibold text-blue-900 mb-4">{category.title}</h2>
+        <ul className="space-y-2">
+          {category.items.map((item, index) => (
+            <li key={index} className="text-sm text-[#002E5B] hover:underline cursor-pointer">
+              &#9675; {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</>
+
     )
 }
 export default Financial_Calculators;
