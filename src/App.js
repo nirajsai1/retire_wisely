@@ -85,7 +85,6 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
         </div>
       </div>
 
-      {/* Mobile Version */}
       <div className="flex md:hidden bg-[#1bcb81] px-2 py-2 items-center gap-2 text-white text-[10px] w-full overflow-x-auto whitespace-nowrap scrollbar-none">
         <div 
           className="flex items-center px-2 py-1 cursor-pointer transition hover:bg-[#002E5B] hover:rounded-lg hover:border hover:border-[#002E5B]"
@@ -106,15 +105,14 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
         </div>
       </div><div className="sticky top-0 bg-white shadow z-20 text-[#002E5B]">
   <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3 text-[#002E5B]">
-    {/* Logo */}
     <img
-      src={image}
-      alt="Logo"
-      className="flex-[3] max-w-[180px] mr-32 ml-16 cursor-pointer"
-      onClick={handlenav}
-    />
+  src={image}
+  alt="Logo"
+  className="flex-[3] max-w-[180px] ml-4 mr-2 md:ml-16 md:mr-32 cursor-pointer"
+  onClick={handlenav}
+/>
 
-    {/* Hamburger Menu - Mobile Only */}
+
     <div className="lg:hidden">
       <button onClick={toggleMobileMenu} className="focus:outline-none">
         <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
@@ -125,13 +123,11 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
       </button>
     </div>
 
-    {/* Main Navigation - Hidden on Mobile */}
     <div className="hidden lg:flex flex-[2] gap-x-12 text-sm font-semibold items-center">
       <Link to="/" className={isActive("/") ? activeClass : defaultClass}>HOME</Link>
       <Link to="/aboutus" className={isActive("/aboutus") ? activeClass : defaultClass}>ABOUT US</Link>
       <Link to="/services" className={isActive("/services") ? activeClass : defaultClass}>SERVICES</Link>
 
-      {/* Dropdown */}
       <div className="relative group inline-block">
         <div className="relative" ref={dropdownRef}>
           <button
@@ -153,7 +149,6 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
       <Link to="/partnership" className={isActive("/partnership") ? activeClass : defaultClass}>PARTNERSHIP</Link>
       <Link to="/contactus" className={isActive("/contactus") ? activeClass : defaultClass}>CONTACT US</Link>
 
-      {/* Social Icons */}
       <div className="flex gap-4">
         <FaFacebook className="w-5 h-5" />
         <FaInstagram className="w-5 h-5" />
@@ -161,7 +156,6 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
     </div>
   </div>
 
-  {/* Mobile Menu */}
  {mobileMenuOpen && (
   <div className="lg:hidden px-6 pb-4 flex flex-col space-y-4 text-sm font-semibold text-[#002E5B]">
     <Link to="/" onClick={closeMobileMenu} className={isActive("/") ? activeClass : defaultClass}>
@@ -174,7 +168,6 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
       SERVICES
     </Link>
 
-    {/* Mobile Dropdown */}
     <div className="flex flex-col">
       <button onClick={toggleMobileDropdown} className="text-left">
         RESOURCES
@@ -194,8 +187,6 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
     <Link to="/contactus" onClick={closeMobileMenu} className={isActive("/contactus") ? activeClass : defaultClass}>
       CONTACT US
     </Link>
-
-    {/* Social Icons */}
     <div className="flex gap-4 mt-4">
       <FaFacebook className="w-5 h-5" />
       <FaInstagram className="w-5 h-5" />
