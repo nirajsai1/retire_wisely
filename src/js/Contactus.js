@@ -3,6 +3,7 @@ import { useState } from "react";
 import {Mail,MapPin} from "lucide-react";
 import close_the_sale from "../images/close_the_sale.jpg";
 import Madhusudhan from "../images/Madhusudan-Budati.jpeg";
+import tarun_mandava from "../images/Tarun_mandava.jpg";
 function Card({ className = "", children }) {
     return <div className={`bg-white rounded-2xl shadow-lg p-4 ${className}`}>{children}</div>;
   }
@@ -58,14 +59,14 @@ function Contactus()
           <h2 className="text-2xl font-bold text-blue-900">Contact Person</h2>
           <div className="flex items-center gap-4 mt-4">
             <img
-              src={Madhusudhan}
-              alt="Madhusudana Budati"
+              src={tarun_mandava}
+              alt="Tarun Mandava"
               className="w-16 h-16 object-cover"
             />
             <div>
-              <h3 className="text-lg font-semibold text-gray-800">Madhusudana Budati</h3>
+              <h3 className="text-lg font-semibold text-gray-800">Tarun Mandava</h3>
               <p className="text-sm text-gray-600">Financial Consultant</p>
-              <p className="text-sm text-green-600">mbudati@retirewisely.biz</p>
+              <p className="text-sm text-green-600">tarunmandava.fin@gmail.com </p>
             </div>
           </div>
         </div>
@@ -73,11 +74,11 @@ function Contactus()
         <div className="space-y-2 mt-4">
           <div className="flex items-start gap-2 text-gray-700">
             <MapPin className="w-5 h-5 mt-1" />
-            <span>116 Foreside Rd, Malvern PA 19355 US</span>
+            <span>1984 Allerton Way, Spring Hill, TN 37174</span>
           </div>
           <div className="flex items-start gap-2 text-green-600">
             <Mail className="w-5 h-5 mt-1" />
-            <span>letstalk@retirewisely.biz</span>
+            <span>tarunmandava.fin@gmail.com</span>
           </div>
         </div>
       </CardContent>

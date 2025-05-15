@@ -26,6 +26,7 @@ import baa_logo from "./images/baa_logo.png";
 import whatsapp from "./images/whatsapp_icon.png";
 import ProfileSection from "./js/ProfileSection";
 import ScrollToTop from "./js/ScrollToTop";
+import munna_llc from "./images/munna_llc.jpg";
 function App() {
   const navigate=useNavigate();
   const [isOpen, setIsOpen] = useState(false);
@@ -80,7 +81,7 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
 
         <div className="flex items-center whitespace-nowrap">
           <FaWhatsapp className="w-7 h-7 pr-2" />
-          <p>Chat on Whatsapp with +1 (484) 467-4744</p>
+          <p>Chat on Whatsapp with +1 925-487-0584</p>
         </div>
       </div>
 
@@ -100,14 +101,14 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
 
         <div className="flex items-center gap-1">
           <FaWhatsapp className="w-4 h-4" />
-          <p className="leading-none">+1 (484) 467-4744</p>
+          <p className="leading-none">+1 925-487-0584</p>
         </div>
       </div><div className="sticky top-0 bg-white shadow z-20 text-[#002E5B]">
   <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3 text-[#002E5B]">
     <img
-  src={image}
+  src={munna_llc}
   alt="Logo"
-  className="flex-[3] max-w-[180px] ml-4 mr-2 md:ml-16 md:mr-32 cursor-pointer"
+  className="flex-[3]  ml-4 mr-2 md:ml-16 md:mr-32 cursor-pointer max-h-[100px] max-w-[100px]"
   onClick={handlenav}
 />
 
@@ -150,8 +151,8 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
 
       <div className="flex gap-4">
         
-      <a href="https://www.facebook.com/retirewisly"><FaFacebook className="w-5 h-5" /></a>
-      <a href="https://www.linkedin.com/company/retirewisely"><FaLinkedinIn className="w-5 h-5" /></a>
+      <a href="https://www.facebook.com/profile.php?id=61563002765802"><FaFacebook className="w-5 h-5" /></a>
+      <a href="https://www.linkedin.com/company/munna-llc-mandava-financial-services/"><FaLinkedinIn className="w-5 h-5" /></a>
       </div>
     </div>
   </div>
@@ -188,8 +189,8 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
       CONTACT US
     </Link>
     <div className="flex gap-4 mt-4">
-      <a href="https://www.facebook.com/retirewisly"><FaFacebook className="w-5 h-5" /></a>
-      <a href="https://www.linkedin.com/company/retirewisely"><FaLinkedinIn className="w-5 h-5" /></a>
+      <a href="https://www.facebook.com/profile.php?id=61563002765802"><FaFacebook className="w-5 h-5" /></a>
+      <a href="https://www.linkedin.com/company/munna-llc-mandava-financial-services/"><FaLinkedinIn className="w-5 h-5" /></a>
     </div>
   </div>
 )}
@@ -231,16 +232,16 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
     <div>
       <h3 className="text-xl font-bold border-t-2 border-[#19e49a] pt-2 mb-3">ABOUT</h3>
       <p className="text-gray-300">
-        At Retire Wisely Financial Services, we strive to simplify your financial life after your retirement. 
+        At Mandava Financial Services, we strive to simplify your financial life after your retirement. 
         We help high-net-worth families and business owners set tangible goals and then put strategies 
         in place to achieve those goals through thoughtful planning and open communication.
       </p>
     </div>
     <div>
       <h3 className="text-xl font-bold border-t-2 border-[#19e49a] pt-2 mb-3">CONTACT INFO</h3>
-      <p>Call: (484) 467-4744</p>
-      <p>Email: letstalk@retirewisely.biz</p>
-      <p className="mt-2">116 Foreside Rd<br />Malvern PA 19355 U.S.</p>
+      <p>Call: +1 319-853-3385</p>
+      <p>Email:  tarunmandava.fin@gmail.com </p>
+      <p className="mt-2">1984 Allerton Way <br/>Spring Hill, TN 37174</p>
       <p>Mon – Fri: 9:00am – 9:00pm</p>
     </div>
 
@@ -272,11 +273,11 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
     <p className="text-center sm:text-left">&copy; 2025 Retire Wisely Financial Services Inc.</p>
     
     <div className="flex gap-4 mt-3 sm:mt-0">
-      <a href="#" aria-label="Facebook" className="bg-white text-[#002e5b] p-2 rounded-full">
+      <a href="https://www.facebook.com/profile.php?id=61563002765802" aria-label="Facebook" className="bg-white text-[#002e5b] p-2 rounded-full">
         <FaFacebook className="w-4 h-4" />
       </a>
-      <a href="#" aria-label="Instagram" className="bg-white text-[#002e5b] p-2 rounded-full">
-        <FaInstagram className="w-4 h-4" />
+      <a href="https://www.linkedin.com/company/munna-llc-mandava-financial-services/" aria-label="Instagram" className="bg-white text-[#002e5b] p-2 rounded-full">
+        <FaLinkedinIn className="w-4 h-4" />
       </a>
     </div>
   </div>

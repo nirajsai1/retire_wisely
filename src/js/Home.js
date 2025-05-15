@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import tarun_mandava from "../images/Tarun_mandava.jpg"; 
 function Home() {
   const services = [
   {
@@ -92,16 +93,10 @@ const settings = {
     </div>
     <div className="w-full md:w-1/2">
       <h2 className="text-3xl font-semibold text-[#002E5B] mb-4">
-        Why Retire Wisely Financial Services?
+        Why Mandava Financial Services?
       </h2>
       <p className="text-[#002E5B] text-sm leading-relaxed">
-        RetireWisely is an independent financial services marketing company that is bringing Wall Street to Main Street and 
-        also giving an equal Business Opportunity who has dream of owning their own financial services agency. 
-        No matter what financial challenges clients may face, RetireWisely has the experience and resources to create 
-        a successful financial plan. Our experienced licensed professionals teach our clients about the “Circle of Safety”. 
-        In these unprecedented financial times, it is important to help clients preserve their capital, while seeking long-term 
-        growth and appreciation. Our professionals are among the most educated and well-trained in the industry. 
-        When you work with RetireWisely, you know that you are working with the best.
+        Mandava Financial Services is an independent financial services marketing company that is bringing Wall Street to Main Street and also giving an equal Business Opportunity to those who dream of owning their own financial services agency. No matter what financial challenges clients may face, Mandava Financial Services has the experience and resources to create a successful financial plan. Our experienced licensed professionals teach our clients about the “Circle of Safety”. In these unprecedented financial times, it is important to help clients preserve their capital, while seeking long-term growth and appreciation. Our professionals are among the most educated and well-trained in the industry. When you work with Mandava Financial Services, you know that you are working with the best.
       </p>
     </div>
   </div>
@@ -144,15 +139,15 @@ const settings = {
       </p>
       <div className="flex flex-col md:flex-row items-start gap-10">
         <div className="w-full md:w-60">
-          <img src={mb} alt="Madhu Budati" className="w-full rounded-lg shadow-md" />
+          <img src={tarun_mandava} alt="Madhu Budati" className="w-full rounded-lg shadow-md" />
         </div>
         <div className="flex-1">
-          <h3 className="text-2xl font-bold text-blue-900">Madhu Budati</h3>
+          <h3 className="text-2xl font-bold text-blue-900">Tarun Mandava</h3>
           <p className="text-lg text-gray-500 mb-4">CEO/President</p>
           <div className="bg-gray-100 rounded-md p-5 mb-4">
             <p className="text-gray-700 text-sm">
-              Madhusudana Budati is an IT Engineer by background but now owns and operates a successful financial services
-              agency. Madhusudana has 20+ years of corporate…
+              Tarun Mandava is an IT Engineer by background but now owns and operates a successful financial services
+              agency. Tarun has 20+ years of corporate…
             </p>
           </div>
           <button

@@ -1,5 +1,6 @@
 import React from "react";
 import Madhusudhan from "../images/mb_big.jpeg";
+import tarun_mandava from "../images/Tarun_mandava.jpg";
 function Aboutus()
 {
     return(
@@ -9,8 +10,8 @@ function Aboutus()
     
       <div className="flex flex-col items-center text-center md:text-left">
         <img
-          src={Madhusudhan}
-          alt="Madhusudana Budati - CEO/President"
+          src={tarun_mandava}
+          alt="Tarun Mandava - CEO/President"
           className="w-72 h-auto object-cover shadow-md rounded-full mx-auto md:mx-0"
         />
         <h2 className="mt-6 text-2xl font-bold text-[#002E5B]">Madhusudana Budati</h2>
@@ -19,7 +20,7 @@ function Aboutus()
 
       <div className="space-y-6 text-gray-800 text-sm text-justify pb-16">
         <p className="pl-4 md:pl-0">
-          Welcome to <strong className="text-[#002E5B]">Retire Wisely Financial Services Inc</strong>, where we are
+          Welcome to <strong className="text-[#002E5B]">Mandava Financial Services Inc</strong>, where we are
           committed to helping our clients achieve their financial goals and plan for a comfortable retirement. Our
           team of experienced financial professionals provides a range of services, including wealth building,
           financial planning, investment advice, retirement planning, business planning, and estate planning.
@@ -72,7 +73,7 @@ function Aboutus()
       <section>
         <h2 className="text-2xl font-bold text-blue-900 mb-4">Why Choose Us</h2>
         <p className="text-gray-700 leading-relaxed">
-          At Retire Wisely Financial Services Inc, we recognize the importance of retirement
+          At Mandava Financial Services Inc, we recognize the importance of retirement
           planning. Our retirement planning services are designed to help you prepare for a
           comfortable retirement. We help you determine your retirement income needs, develop a
           plan to achieve those needs, and provide ongoing guidance and support as you work
