@@ -145,7 +145,7 @@ const defaultClass = "text-[#002E5B]";
       <Link to="/partnership" className={isActive("/partnership") ? activeClass : defaultClass}>PARTNERSHIP</Link>
       <Link to="/contactus" className={isActive("/contactus") ? activeClass : defaultClass}>CONTACT US</Link>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4 text-[#002E5B]">
         
       <a href="https://www.facebook.com/profile.php?id=61563002765802"><FaFacebook className="w-5 h-5" /></a>
       <a href="https://www.linkedin.com/company/munna-llc-mandava-financial-services/"><FaLinkedinIn className="w-5 h-5" /></a>

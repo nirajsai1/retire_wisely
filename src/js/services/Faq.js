@@ -148,7 +148,7 @@ const Faq = () =>
         </div>
         <button
           type="submit"
-          className="w-full bg-[#002E5B] text-white py-3 rounded-md font-semibold hover:bg-blue-800 transition"
+          className="w-full bg-gray-900 text-white py-3 rounded-md font-semibold hover:bg-[#644e40] transition"
         >
           Submit Your Request
         </button>
