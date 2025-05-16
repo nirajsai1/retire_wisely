@@ -55,7 +55,7 @@ function Aboutus()
       <section className="mb-8">
         <h3 className="text-[#644e40] font-bold text-xl uppercase">Our Mission</h3>
         <p className="text-gray-500 text-lg mb-2">Create Wealth for Families</p>
-        <blockquote className="border-l-4 border-green-600 bg-gray-100 p-4 text-gray-800">
+        <blockquote className="border-l-4 border-[#d89e7f] bg-gray-100 p-4 text-gray-800">
           Empowering financial success through personalized guidance, education, and solutions.
           Trust, navigate complexity, optimize wealth for client goals.
         </blockquote>
@@ -64,7 +64,7 @@ function Aboutus()
       <section className="mb-8">
         <h3 className="text-[#644e40] font-bold text-xl uppercase">Our Vision</h3>
         <p className="text-gray-500 text-lg mb-2">Lead Consumer Empowerment Revolution</p>
-        <blockquote className="border-l-4 border-teal-500 bg-gray-100 p-4 text-gray-800">
+        <blockquote className="border-l-4 border-[#d89e7f] bg-gray-100 p-4 text-gray-800">
           Empowering financial prosperity—our vision for a secure future guiding your journey to
           financial success with trust and innovation for client goals.
         </blockquote>

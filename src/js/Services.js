@@ -101,7 +101,7 @@ function Services() {
           key={idx}
           onClick={() => handleClick(idx)}
           className={`cursor-pointer border-4 p-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 
-            ${selected === idx ? "border-green-600 bg-green-50" : "border-[#644e40] hover:border-[#002E5B] hover:bg-green-5"}`}
+            ${selected === idx ? "border-gray-900 " : "border-[#644e40] hover:border-[#002E5B] hover:bg-green-5"}`}
         >
           <h3 className="text-xl font-bold text-blue-900 mb-4">{service.title}</h3>
           <p className="text-sm text-gray-700">{service.description}</p>

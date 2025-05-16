@@ -89,7 +89,7 @@ function Book_an_appointment() {
         key={idx}
         onClick={() => setSelected(idx)}
         className={`cursor-pointer border-4 p-6 rounded shadow-sm transition-all duration-200 
-          ${selected === idx ? "border-green-600" : "border-[#002E5B] hover:border-green-600"}`}
+          ${selected === idx ? "border-[#644e40]" : "border-[#002E5B] hover:border-[#644e40]"}`}
       >
         <h3 className="text-center text-4xl font-bold text-[#002E5B] mb-4">{service.title}</h3>
         <p className="text-center text-xl font-semibold text-[#002E5B]">{service.description}</p>

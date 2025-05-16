@@ -54,7 +54,7 @@ const Faq = () =>
             className="w-full flex items-center justify-between px-6 py-4 bg-gray-300 border-b border-gray-200 text-left focus:outline-none"
           >
             <span className="font-semibold text-blue-900">{faq.question}</span>
-            <span className="text-green-600 font-bold text-xl">
+            <span className="text-[#002E5B] font-bold text-xl">
               {activeIndex === index ? '-' : '+'}
             </span>
           </button>
