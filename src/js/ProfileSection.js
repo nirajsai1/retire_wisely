@@ -1,21 +1,22 @@
 import React from "react";
 import consulting from "../images/mb_picture.jpeg";
+import tarun from "../images/Tarun_mandava.jpg";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 const ProfileSection = () => {
     const expertise= ["Personalized Approach","Innovative Thinking","Expertise in Market Trends","Comprehensive Services"]
   return (
    <>
   <div className="pb-5 max-w-screen-xl mx-auto px-6 sm:px-10 py-5">
-    <h1 className="text-3xl font-bold text-[#002E5B]">Madhusudana Budati</h1>
+    <h1 className="text-3xl font-bold text-">Tarun Kumar Mandava</h1>
     <p className="text-gray-500 mb-6 pt-2 text-lg">CEO/President</p>
   </div>
 
   <div className="flex max-w-screen-xl mx-auto px-6 sm:px-10 pt-4 pb-6">
     <div className="flex-shrink-0">
       <img
-        src={consulting}
+        src={tarun}
         alt="Consulting"
-        className="w-[225px] h-[250px] rounded-lg shadow-lg border-b-2 border-transparent hover:border-b-green-500 transition duration-300"
+        className="w-[250px] h-[250px] rounded-lg shadow-lg border-b-2 border-transparent hover:border-b-green-500 transition duration-300"
       />
     </div>
 
@@ -46,7 +47,7 @@ const ProfileSection = () => {
   </p>
 
   <div className="max-w-screen-xl mx-auto px-6 sm:px-10 pb-16 pt-8">
-    <div className="bg-green-500 text-white py-10 px-6 md:px-20">
+    <div className="bg-[#644e40] text-white py-10 px-6 md:px-20">
       <div className="grid md:grid-cols-3 gap-6 items-start pb-5">
         <div>
           <h2 className="text-lg font-bold mb-4">Contact Details</h2>
@@ -61,8 +62,8 @@ const ProfileSection = () => {
         <div>
           <h3 className="font-semibold mb-2">Social Profiles</h3>
           <div className="flex gap-3">
-            <a href="#" className="bg-white text-green-600 p-2 rounded-full hover:bg-green-600 hover:text-white transition-colors"><FaFacebookF /></a>
-            <a href="#" className="bg-white text-green-600 p-2 rounded-full hover:bg-green-600 hover:text-white transition-colors"><FaLinkedinIn /></a>
+            <a href="#" className="bg-white text-[#002E5B] p-2 rounded-full hover:bg-green-600 hover:text-white transition-colors"><FaFacebookF /></a>
+            <a href="#" className="bg-white text-[#002E5B] p-2 rounded-full hover:bg-green-600 hover:text-white transition-colors"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>
@@ -78,11 +79,11 @@ const ProfileSection = () => {
         </div>
 
         <form className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="First Name" />
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Last Name" />
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="E-mail" />
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Phone Number" />
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="City" />
+          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="First Name" />
+          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Last Name" />
+          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="E-mail" />
+          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Phone Number" />
+          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="City" />
           <select className="p-3 bg-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
             <option>Select State (USA only)</option>
           </select>

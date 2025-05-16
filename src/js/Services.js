@@ -77,7 +77,7 @@ function Services() {
   <div className="bg-gray-50">
     <section className="flex flex-col md:flex-row p-10 justify-between items-center max-w-screen-xl mx-auto px-6 sm:px-10 py-3">
       <div className="md:w-1/2 mb-8 md:mb-0">
-        <h1 className="text-3xl md:text-4xl text-[#4cbb17] font-semibold leading-tight pb-8">
+        <h1 className="text-3xl md:text-4xl text-[#644e40] font-semibold leading-tight pb-8">
           Our Services
         </h1>
         <h4 className="text-xl md:text-xl text-gray-700">
@@ -101,7 +101,7 @@ function Services() {
           key={idx}
           onClick={() => handleClick(idx)}
           className={`cursor-pointer border-4 p-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 
-            ${selected === idx ? "border-green-600 bg-green-50" : "border-[#002E5B] hover:border-green-600 hover:bg-green-50"}`}
+            ${selected === idx ? "border-green-600 bg-green-50" : "border-[#644e40] hover:border-[#002E5B] hover:bg-green-5"}`}
         >
           <h3 className="text-xl font-bold text-blue-900 mb-4">{service.title}</h3>
           <p className="text-sm text-gray-700">{service.description}</p>

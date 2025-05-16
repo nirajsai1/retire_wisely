@@ -66,7 +66,7 @@ function Contactus()
             <div>
               <h3 className="text-lg font-semibold text-gray-800">Tarun Mandava</h3>
               <p className="text-sm text-gray-600">Financial Consultant</p>
-              <p className="text-sm text-green-600">tarunmandava.fin@gmail.com </p>
+              <p className="text-sm text-[#002E5B]">tarunmandava.fin@gmail.com </p>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ function Contactus()
             <MapPin className="w-5 h-5 mt-1" />
             <span>1984 Allerton Way, Spring Hill, TN 37174</span>
           </div>
-          <div className="flex items-start gap-2 text-green-600">
+          <div className="flex items-start gap-2 text-[#002E5B]">
             <Mail className="w-5 h-5 mt-1" />
             <span>tarunmandava.fin@gmail.com</span>
           </div>
@@ -144,7 +144,7 @@ function Contactus()
         <div className="md:col-span-2">
           <button
             type="submit"
-            className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-bold flex items-center gap-2"
+            className="bg-gray-900 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-bold flex items-center gap-2"
           >
             SEND
             <span className="text-xl">➤</span>

@@ -14,7 +14,7 @@ function Aboutus()
           alt="Tarun Mandava - CEO/President"
           className="w-72 h-auto object-cover shadow-md rounded-full mx-auto md:mx-0"
         />
-        <h2 className="mt-6 text-2xl font-bold text-[#002E5B]">Madhusudana Budati</h2>
+        <h2 className="mt-6 text-2xl font-bold text-[#002E5B]">Tarun Kumar Mandava</h2>
         <p className="text-gray-600 text-sm mt-1">CEO / President</p>
       </div>
 
@@ -38,7 +38,7 @@ function Aboutus()
           expenses, debt, and savings. We provide guidance on budgeting, debt management, and tax planning, among
           other topics, to help you achieve your financial goals.
         </p>
-        <div className="border-l-4 border-green-600 bg-white p-4 text-gray-700 shadow-sm">
+        <div className="border-l-4 border-[#d89e7f] bg-white p-4 text-gray-700 shadow-sm">
           <p>
             We understand that each of our clients has unique financial needs and objectives, which is why we take a
             personalized approach to every engagement. We take the time to understand your current financial
@@ -53,7 +53,7 @@ function Aboutus()
   <div className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10">
     <div>
       <section className="mb-8">
-        <h3 className="text-green-600 font-bold text-xl uppercase">Our Mission</h3>
+        <h3 className="text-[#644e40] font-bold text-xl uppercase">Our Mission</h3>
         <p className="text-gray-500 text-lg mb-2">Create Wealth for Families</p>
         <blockquote className="border-l-4 border-green-600 bg-gray-100 p-4 text-gray-800">
           Empowering financial success through personalized guidance, education, and solutions.
@@ -62,7 +62,7 @@ function Aboutus()
       </section>
 
       <section className="mb-8">
-        <h3 className="text-green-600 font-bold text-xl uppercase">Our Vision</h3>
+        <h3 className="text-[#644e40] font-bold text-xl uppercase">Our Vision</h3>
         <p className="text-gray-500 text-lg mb-2">Lead Consumer Empowerment Revolution</p>
         <blockquote className="border-l-4 border-teal-500 bg-gray-100 p-4 text-gray-800">
           Empowering financial prosperity—our vision for a secure future guiding your journey to

@@ -24,7 +24,7 @@ function Partnership()
   <div className="bg-gray-50">
     <section className="flex flex-col md:flex-row p-10 items-center justify-between max-w-screen-xl mx-auto px-4 md:px-20 py-6">
       <div className="md:w-1/2 mb-8 md:mb-0">
-        <h4 className="text-green-600 font-semibold uppercase text-sm mb-4">
+        <h4 className="text-[#644e40] font-semibold uppercase text-sm mb-4">
           Aspiring for Partnership
         </h4>
         <h1 className="text-4xl md:text-5xl font-semibold text-gray-700 leading-tight">
@@ -55,7 +55,7 @@ function Partnership()
   </div>
 
   <div className="max-w-screen-xl mx-auto px-4 md:px-20 py-6">
-    <button className="bg-[#002E5B] text-white font-semibold rounded-md hover:bg-[#1bcb81] transition px-7 py-3 duration-300 ease-in-out" onClick={() => navigate('/baa')}>
+    <button className="bg-gray-900 text-white font-semibold rounded-md hover:bg-[#644e40] transition px-7 py-3 duration-300 ease-in-out" onClick={() => navigate('/baa')}>
       BOOK AN APPOINTMENT
     </button>
   </div>

@@ -60,7 +60,7 @@ const settings = {
           individual requirements to support clients on their financial journey.
         </p>
       </div>
-      <div className="bg-white border-l-4 border-green-500 p-6 shadow-md md:w-1/3 w-full">
+      <div className="bg-white border-l-4 border-[#d89e7f] p-6 shadow-md md:w-1/3 w-full">
         <p className="text-blue-900 font-semibold text-lg">
           “Take control of your finances with tailored solutions from our experts”
         </p>
@@ -76,7 +76,7 @@ const settings = {
             <img
               src={img}
               alt="Feature"
-              className="max-h-[350px] max-w-[350px] mx-auto mb-4 shadow-lg border-t-2 border-l-2 border-r-2 border-b-4 border-transparent hover:border-b-green-500 transition duration-300"
+              className="max-h-[350px] max-w-[350px] mx-auto mb-4 shadow-lg border-t-4 border-l-4 border-r-4 border-b-4 border-transparent hover:border-[#d89e7f] transition duration-300"
             />
             <h2 className="text-xl font-bold text-gray-900">
               {['Consulting', 'Services', 'Partnership'][idx]}
@@ -118,7 +118,7 @@ const settings = {
               <h3 className="text-xl font-semibold text-[#002E5B] mb-4">{service.title}</h3>
               <p className="text-[#002E5B] text-sm font-serif mb-6">{service.description}</p>
               <button
-                className="bg-[#002E5B] hover:bg-[#1bcb81] text-white px-6 py-2 rounded font-semibold"
+                className="bg-[#644e40] hover:bg-gray-900 text-white px-6 py-2 rounded font-semibold"
                 onClick={() => navigate('/services')}
               >
                 More Services
@@ -139,10 +139,10 @@ const settings = {
       </p>
       <div className="flex flex-col md:flex-row items-start gap-10">
         <div className="w-full md:w-60">
-          <img src={tarun_mandava} alt="Madhu Budati" className="w-full rounded-lg shadow-md" />
+          <img src={tarun_mandava} alt="Tarun Kumar" className="w-full rounded-lg shadow-md" />
         </div>
         <div className="flex-1">
-          <h3 className="text-2xl font-bold text-blue-900">Tarun Mandava</h3>
+          <h3 className="text-2xl font-bold text-gray-900">Tarun Mandava</h3>
           <p className="text-lg text-gray-500 mb-4">CEO/President</p>
           <div className="bg-gray-100 rounded-md p-5 mb-4">
             <p className="text-gray-700 text-sm">
@@ -151,7 +151,7 @@ const settings = {
             </p>
           </div>
           <button
-            className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-md transition"
+            className="bg-[#644e40] hover:bg-gray-900 text-white font-semibold px-6 py-2 rounded-md transition"
             onClick={() => navigate('/psection')}
           >
             VIEW PROFILE

@@ -14,16 +14,11 @@ import image from "./images/Logo.jpg";
 import Faq from "./js/services/Faq";
 import FC from "./js/Financial_Calculators";
 import Useful_links from "./js/services/Useful_Links";
-import clock from "./images/clock_icon.webp";
-import instagram from "./images/Instagram.webp";
-import facebook from "./images/Facebook.webp";
 import College_planning from "./js/quick_links/College_planning";
 import Retirement_planning from "./js/quick_links/Retirement_planning";
 import Tax_planning from "./js/quick_links/Tax_planning";
 import Privacy_policy from "./js/Privacy_policy";
 import  {Our_blog}  from "./js/Our_blog";
-import baa_logo from "./images/baa_logo.png";
-import whatsapp from "./images/whatsapp_icon.png";
 import ProfileSection from "./js/ProfileSection";
 import ScrollToTop from "./js/ScrollToTop";
 import munna_llc from "./images/munna_llc.jpg";
@@ -60,14 +55,13 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
   }
    const location = useLocation();
    const isActive = (path) => location.pathname === path;
-
-  const activeClass = "text-green-500"; 
-  const defaultClass = "[#002E5B]"; 
+const activeClass = "text-gray-900";
+const defaultClass = "text-[#002E5B]";
   return (
       <div>
-      <div className="hidden md:flex bg-[#1bcb81] p-3 justify-center items-center gap-8 text-white text-sm w-full z-10">
+      <div className="hidden md:flex bg-[#644e40] p-3 justify-center items-center gap-8 text-white text-sm w-full z-10">
         <div 
-          className="flex items-center px-4 py-2 cursor-pointer transition hover:bg-[#002E5B] hover:rounded-xl hover:border hover:border-[#002E5B] whitespace-nowrap"
+          className="flex items-center px-4 py-2 cursor-pointer transition hover:bg-gray-900 hover:rounded-xl hover:border hover:border-[#d7a07d] whitespace-nowrap"
           onClick={() => navigate('/baa')}
         >
           <CalendarPlus className="text-white w-5 h-5" />
@@ -85,7 +79,7 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
         </div>
       </div>
 
-      <div className="flex md:hidden bg-[#1bcb81] px-2 py-2 items-center gap-2 text-white text-[10px] w-full overflow-x-auto whitespace-nowrap scrollbar-none">
+      <div className="flex md:hidden bg-[#644e40] px-2 py-2 items-center gap-2 text-white text-[10px] w-full overflow-x-auto whitespace-nowrap scrollbar-none">
         <div 
           className="flex items-center px-2 py-1 cursor-pointer transition hover:bg-[#002E5B] hover:rounded-lg hover:border hover:border-[#002E5B]"
           onClick={() => navigate('/baa')}
@@ -103,8 +97,10 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
           <FaWhatsapp className="w-4 h-4" />
           <p className="leading-none">+1 925-487-0584</p>
         </div>
-      </div><div className="sticky top-0 bg-white shadow z-20 text-[#002E5B]">
-  <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3 text-[#002E5B]">
+      </div>
+      <div className="h-px bg-[#f2efe8]"></div>
+      <div className="sticky top-0 bg-white shadow z-20 text-[#002E5B]">
+  <div className="flex items-center justify-between max-w-screen-xl mx-auto px-6 py-3 text-white">
     <img
   src={munna_llc}
   alt="Logo"
@@ -137,10 +133,10 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
             RESOURCES
           </button>
           {dropdownOpen && (
-            <div className="absolute bg-white shadow-lg mt-2 rounded-md z-30 w-40">
-              <Link to="/fc" className="block px-4 py-2 hover:bg-gray-100" onClick={handleOptionClick}>Financial Calculators</Link>
-              <Link to="/useful_links" className="block px-4 py-2 hover:bg-gray-100" onClick={handleOptionClick}>Useful Links</Link>
-              <Link to="/faq" className="block px-4 py-2 hover:bg-gray-100" onClick={handleOptionClick}>Frequently Asked Questions</Link>
+            <div className="absolute bg-gray-900 shadow-lg mt-2 rounded-md z-30 w-40 text-white">
+              <Link to="/fc" className="block px-4 py-2 hover:bg-[#da9f7e]" onClick={handleOptionClick}>Financial Calculators</Link>
+              <Link to="/useful_links" className="block px-4 py-2 hover:bg-[#da9f7e]" onClick={handleOptionClick}>Useful Links</Link>
+              <Link to="/faq" className="block px-4 py-2 hover:bg-[#da9f7e]" onClick={handleOptionClick}>Frequently Asked Questions</Link>
             </div>
           )}
         </div>
@@ -219,18 +215,18 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
         </div>
         <footer className="bg-[#002e5b] text-white">
 
-  <div className="bg-[#19e49a] px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+  <div className="bg-[#644e40] px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
     <h2 className="text-xl sm:text-2xl font-bold">Looking For A Financial Consultant?</h2>
     <button
       onClick={() => navigate('/baa')}
-      className="mt-3 sm:mt-0 bg-[#002e5b] hover:bg-[#001f3d] text-white font-semibold px-6 py-2 rounded shadow"
+      className="mt-3 sm:mt-0 bg-gray-900 hover:bg-[#001f3d] text-white font-semibold px-6 py-2 rounded shadow"
     >
       BOOK AN APPOINTMENT
     </button>
   </div>
   <div className="max-w-screen-xl mx-auto px-6 sm:px-12 md:px-16 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
     <div>
-      <h3 className="text-xl font-bold border-t-2 border-[#19e49a] pt-2 mb-3">ABOUT</h3>
+      <h3 className="text-xl font-bold border-t-2 border-[#d89e7f] pt-2 mb-3">ABOUT</h3>
       <p className="text-gray-300">
         At Mandava Financial Services, we strive to simplify your financial life after your retirement. 
         We help high-net-worth families and business owners set tangible goals and then put strategies 
@@ -238,7 +234,7 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
       </p>
     </div>
     <div>
-      <h3 className="text-xl font-bold border-t-2 border-[#19e49a] pt-2 mb-3">CONTACT INFO</h3>
+      <h3 className="text-xl font-bold border-t-2 border-[#d89e7f] pt-2 mb-3">CONTACT INFO</h3>
       <p>Call: +1 319-853-3385</p>
       <p>Email:  tarunmandava.fin@gmail.com </p>
       <p className="mt-2">1984 Allerton Way <br/>Spring Hill, TN 37174</p>
@@ -246,7 +242,7 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
     </div>
 
     <div>
-      <h3 className="text-xl font-bold border-t-2 border-[#19e49a] pt-2 mb-3">QUICK LINKS</h3>
+      <h3 className="text-xl font-bold border-t-2 border-[#d89e7f] pt-2 mb-3">QUICK LINKS</h3>
       <ul className="space-y-1">
         <li><Link to="/retirement_p">Retirement Planning</Link></li>
         <li><Link to="/college_p">College Planning</Link></li>
@@ -255,7 +251,7 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
     </div>
 
     <div>
-      <h3 className="text-xl font-bold border-t-2 border-[#19e49a] pt-2 mb-3">INFORMATION</h3>
+      <h3 className="text-xl font-bold border-t-2 border-[#d89e7f] pt-2 mb-3">INFORMATION</h3>
       <ul className="grid grid-cols-2 gap-y-1 gap-x-4">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/AboutUs">About Us</Link></li>
