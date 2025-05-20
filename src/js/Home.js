@@ -76,7 +76,7 @@ const settings = {
             <img
               src={img}
               alt="Feature"
-              className="max-h-[350px] max-w-[350px] mx-auto mb-4 shadow-lg border-t-4 border-l-4 border-r-4 border-b-4 border-transparent hover:border-[#d89e7f] transition duration-300"
+              className="max-h-[350px] max-w-[350px] mx-auto mb-4 shadow-lg border-t-4 border-l-4 border-r-4 border-b-4 border-transparent hover:border-b-[#d89e7f] transition duration-300"
             />
             <h2 className="text-xl font-bold text-gray-900">
               {['Consulting', 'Services', 'Partnership'][idx]}

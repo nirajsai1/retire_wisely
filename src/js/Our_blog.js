@@ -1,13 +1,15 @@
 import React from "react";
 import blog1 from "../images/blog_1.png";
-import blog2 from "../images/blog_2.png";
+import blog44 from "../images/blog_44.png";
 import blog3 from "../images/blog_3.png";
 import blog4 from "../images/blog_4.png";
 import blog5 from "../images/blog_5.png";
+import {Link} from "react-router-dom";
 export const Our_blog = () =>
 {
     return(
 <>
+<div className="bg-gray-100">
   <div className="max-w-screen-xl mx-auto px-4 sm:px-20 py-6">
     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
     
@@ -18,46 +20,42 @@ export const Our_blog = () =>
             title: "Step-By-Step Guide To Becoming A Licensed Life Insurance Agent", 
             date: "November 26, 2024", 
             image: blog1, 
-            link: "https://retirewisely.biz/step-by-step-guide-to-becoming-a-licensed-life-insurance-agent/"
-          },
-          { 
-            title: "Insurance Sales Training: Techniques for Success and Industry-Specific Tips", 
-            date: "November 19, 2024", 
-            image: blog2, 
-            link: "https://retirewisely.biz/step-by-step-guide-to-becoming-a-licensed-life-insurance-agent/"
+            link: "/blog1"
           },
           { 
             title: "The Best Ways for Agents to Get Life Insurance Leads", 
             date: "November 19, 2024", 
             image: blog3, 
-            link: "https://retirewisely.biz/step-by-step-guide-to-becoming-a-licensed-life-insurance-agent/"
+            link: "/blog2"
           },
           { 
             title: "How To Start Your Own Independent Insurance Agency", 
             date: "November 16, 2024", 
             image: blog4, 
-            link: "https://retirewisely.biz/step-by-step-guide-to-becoming-a-licensed-life-insurance-agent/"
+            link: "/blog3"
+          },
+          {
+            title:"Crafting an Effective Bio for Insurance Agents: Tips and Examples",
+            image:blog44,
+            link:"/blog4"
           },
           { 
-            title: "How Can I Sell My Life Insurance Policy?", 
+            title: "How to Increase Insurance Sales", 
             date: "November 16, 2024", 
             image: blog5, 
-            link: "https://retirewisely.biz/step-by-step-guide-to-becoming-a-licensed-life-insurance-agent/"
+            link: "/blog5"
           }
         ].map((post, index) => (
-          <div key={index} className="mb-6">
-            <h1 className="text-xl font-bold text-[#002E5B] mb-2">{post.title}</h1>
+          <div key={index} className="mb-6 pb-4 border-b border-b-[#644e40]">
+            <h1 className="text-2xl font-bold text-[#002E5B] mb-2">{post.title}</h1>
             <div className="text-sm text-gray-500 flex items-center gap-4 mb-4">
-              <span>📅 {post.date}</span>
-              <span>Posted by: <strong>admin</strong></span>
-              <span>Category: <em>Insurance</em></span>
-              <span>💬 No Comments</span>
+              
             </div>
-            <div className="border border-gray-200 p-4">
-              <img src={post.image} alt="Insurance Guide" className="w-full object-cover mb-4" />
-              <a href={post.link} className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-full">
+            <div className="">
+              <img src={post.image} alt="Insurance Guide" className="w-full h-full  mb-4" />
+              <Link to={post.link} className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-full">
                 READ MORE
-              </a>
+              </Link>
             </div>
           </div>
         ))}
@@ -67,35 +65,18 @@ export const Our_blog = () =>
         <div className="mb-6">
           <h2 className="text-xl font-bold text-[#002E5B] mb-2 pb-5">Recent Posts</h2>
           <ul className="space-y-2 text-blue-700 text-sm">
-            <li><a href="#">Step-by-Step Guide to Becoming a Licensed Life Insurance Agent</a></li>
-            <li><a href="#">Insurance Sales Training: Techniques for Success and Industry-Specific Tips</a></li>
-            <li><a href="#">The Best Ways for Agents to Get Life Insurance Leads</a></li>
-            <li><a href="#">How To Start Your Own Independent Insurance Agency</a></li>
-            <li><a href="#">How Can I Sell My Life Insurance Policy?</a></li>
+            <li><Link to='/blog1'>Step-by-Step Guide to Becoming a Licensed Life Insurance Agent</Link></li>
+            <li><Link to='/blog2'>Insurance Sales Training: Techniques for Success and Industry-Specific Tips</Link></li>
+            <li><Link to="/blog3">The Best Ways for Agents to Get Life Insurance Leads</Link></li>
+            <li><Link to="blog4">How To Start Your Own Independent Insurance Agency</Link></li>
+            <li><Link to="blog5">How Can I Sell My Life Insurance Policy?</Link></li>
           </ul>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-[#002E5B] mb-2">Recent Comments</h2>
-          <p className="text-sm text-gray-500">No comments to show.</p>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold text-[#002E5B] mb-2 pt-5">Archives</h2>
-          <ul className="space-y-2 text-[#27679c] text-sm">
-            <li>November 2024</li>
-            <li>October 2024</li>
-            <li>September 2024</li>
-            <li>June 2023</li>
-          </ul>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold text-[#002E5B] mb-2 pt-5">Categories</h2>
-          <ul className="space-y-2 text-[#27679c] text-sm">
-            <li>Insurance</li>
-            <li>Uncategorized</li>
-          </ul>
         </div>
       </aside>
     </div>
+  </div>
   </div>
 </>
 

@@ -4,7 +4,7 @@ function Privacy_policy()
 <>
   <div className="bg-white text-[#012b61] px-6 py-10 max-w-6xl mx-auto">
     <h1 className="text-4xl md:text-5xl font-bold mb-6">
-      PRIVACY POLICY FOR RETIRE WISELY FINANCIAL SERVICES INC.
+      PRIVACY POLICY FOR MANDAVA FINANCIAL SERVICES INC.
     </h1>
 
     <p className="mb-6 text-md leading-relaxed">

@@ -17,13 +17,13 @@ function Retirement_planning()
     
     <div className="flex-1 px-2 md:px-8">
       <p className="text-sm text-[#1a1a1a] mb-6">
-        Welcome to Retire Wisely Financial Services, where we are dedicated to helping you make the most of your retirement years. Our team of experienced financial advisors provides comprehensive financial planning services to high-net-worth families and business owners who are seeking to achieve their financial goals and enjoy a comfortable retirement.
+        Welcome to Mandava Financial Services, where we are dedicated to helping you make the most of your retirement years. Our team of experienced financial advisors provides comprehensive financial planning services to high-net-worth families and business owners who are seeking to achieve their financial goals and enjoy a comfortable retirement.
       </p>
 
       <div className="flex flex-col md:flex-row items-start mb-6 gap-6">
         <img src={Rp} alt="Retirement Plan" className="w-full md:w-[350px] rounded shadow" />
         <p className="text-sm text-[#1a1a1a]">
-          At Retire Wisely, we understand that retirement planning can be overwhelming and confusing, which is why we strive to simplify the process for our clients. We work closely with each client to gain a thorough understanding of their unique financial situation and goals. From there, we develop a customized plan that is tailored to meet their specific needs and objectives.
+          At Mandava Financial Services, we understand that retirement planning can be overwhelming and confusing, which is why we strive to simplify the process for our clients. We work closely with each client to gain a thorough understanding of their unique financial situation and goals. From there, we develop a customized plan that is tailored to meet their specific needs and objectives.
         </p>
       </div>
 
@@ -36,7 +36,7 @@ function Retirement_planning()
       </p>
 
       <p className="text-sm text-[#1a1a1a]">
-        At Retire Wisely Financial Services, we are dedicated to helping our clients retire with confidence and security. Contact us today to learn more about how we can help you achieve your financial goals and enjoy the retirement you deserve.
+        At Mandava Financial Services, we are dedicated to helping our clients retire with confidence and security. Contact us today to learn more about how we can help you achieve your financial goals and enjoy the retirement you deserve.
       </p>
     </div>
 

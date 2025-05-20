@@ -10,7 +10,6 @@ import Contactus from "./js/Contactus";
 import Partnership from "./js/Partnership";
 import Resources from "./js/Resources";
 import Services from "./js/Services";
-import image from "./images/Logo.jpg";
 import Faq from "./js/services/Faq";
 import FC from "./js/Financial_Calculators";
 import Useful_links from "./js/services/Useful_Links";
@@ -20,8 +19,12 @@ import Tax_planning from "./js/quick_links/Tax_planning";
 import Privacy_policy from "./js/Privacy_policy";
 import  {Our_blog}  from "./js/Our_blog";
 import ProfileSection from "./js/ProfileSection";
-import ScrollToTop from "./js/ScrollToTop";
 import munna_llc from "./images/munna_llc.jpg";
+import Blog1 from "./js/blogs/Blog1";
+import Blog2 from "./js/blogs/Blog2";
+import Blog3 from "./js/blogs/Blog3";
+import Blog5 from "./js/blogs/Blog5";
+import Blog44 from "./js/blogs/Blog4";
 function App() {
   const navigate=useNavigate();
   const [isOpen, setIsOpen] = useState(false);
@@ -104,7 +107,7 @@ const defaultClass = "text-[#002E5B]";
     <img
   src={munna_llc}
   alt="Logo"
-  className="flex-[3]  ml-4 mr-2 md:ml-16 md:mr-32 cursor-pointer max-h-[100px] max-w-[100px]"
+  className="flex-[3]  ml-4 mr-2 md:ml-16 md:mr-32 cursor-pointer max-h-[80px] max-w-[80px]"
   onClick={handlenav}
 />
 
@@ -211,9 +214,14 @@ const defaultClass = "text-[#002E5B]";
             <Route path='/our_blog' element={<Our_blog></Our_blog>}></Route>
             <Route path='/baa' element={<Book_an_appointment></Book_an_appointment>}></Route>
             <Route path='/psection' element={<ProfileSection/>}></Route>
+            <Route path='/blog1' element={<Blog1/>}></Route>
+            <Route path='/blog2' element={<Blog2/>}></Route>
+            <Route path='/blog3' element={<Blog3/>}></Route>
+            <Route path='/blog5' element={<Blog5/>}></Route>
+            <Route path='/blog4' element={<Blog44/>}></Route>
           </Routes>
         </div>
-        <footer className="bg-[#002e5b] text-white">
+        <footer className="bg-[#333333] text-white">
 
   <div className="bg-[#644e40] px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
     <h2 className="text-xl sm:text-2xl font-bold">Looking For A Financial Consultant?</h2>
@@ -266,7 +274,7 @@ const defaultClass = "text-[#002E5B]";
   </div>
 
   <div className="border-t border-gray-400 py-4 px-6 flex flex-col sm:flex-row justify-between items-center text-gray-400 text-sm">
-    <p className="text-center sm:text-left">&copy; 2025 Retire Wisely Financial Services Inc.</p>
+    <p className="text-center sm:text-left">&copy; 2025 Mandava Financial Services Inc.</p>
     
     <div className="flex gap-4 mt-3 sm:mt-0">
       <a href="https://www.facebook.com/profile.php?id=61563002765802" aria-label="Facebook" className="bg-white text-[#002e5b] p-2 rounded-full">

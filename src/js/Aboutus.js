@@ -1,5 +1,4 @@
 import React from "react";
-import Madhusudhan from "../images/mb_big.jpeg";
 import tarun_mandava from "../images/Tarun_mandava.jpg";
 function Aboutus()
 {

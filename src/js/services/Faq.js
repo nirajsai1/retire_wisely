@@ -92,7 +92,7 @@ const Faq = () =>
       <section>
         <h2 className="text-2xl font-bold text-[#644e40] mb-4">Why Choose Us</h2>
         <p className="text-sm text-gray-700 leading-relaxed mb-2">
-          At Retire Wisely Financial Services Inc, we recognize the importance of retirement planning.
+          At Mandava Financial Services Inc, we recognize the importance of retirement planning.
           Our services help you determine your retirement income needs, develop a plan to achieve those needs,
           and provide ongoing support.
         </p>
