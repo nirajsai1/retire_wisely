@@ -1,5 +1,5 @@
 import React from "react";
-import blog44 from "../../images/blog_44.png";
+import blog4 from "../../images/blog_4.png";
 
 function Blog4() {
   
@@ -14,7 +14,7 @@ function Blog4() {
                     {/* Image Section */}
                     <div className="flex-1">
                       <img
-                        src={blog44}
+                        src={blog4}
                         className="w-[800px] max-w-full h-[400px] object-cover rounded"
                         alt="Blog Visual"
                       />

@@ -1,7 +1,7 @@
 import React from "react";
 import blog1 from "../images/blog_1.png";
-import blog44 from "../images/blog_44.png";
 import blog3 from "../images/blog_3.png";
+import blog2 from "../images/blog_2.png";
 import blog4 from "../images/blog_4.png";
 import blog5 from "../images/blog_5.png";
 import {Link} from "react-router-dom";
@@ -25,18 +25,18 @@ export const Our_blog = () =>
           { 
             title: "The Best Ways for Agents to Get Life Insurance Leads", 
             date: "November 19, 2024", 
-            image: blog3, 
+            image: blog2, 
             link: "/blog2"
           },
           { 
             title: "How To Start Your Own Independent Insurance Agency", 
             date: "November 16, 2024", 
-            image: blog4, 
+            image: blog3, 
             link: "/blog3"
           },
           {
             title:"Crafting an Effective Bio for Insurance Agents: Tips and Examples",
-            image:blog44,
+            image:blog4,
             link:"/blog4"
           },
           { 
