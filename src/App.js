@@ -59,7 +59,7 @@ const toggleMobileDropdown = () => setMobileDropdownOpen(!mobileDropdownOpen);
    const location = useLocation();
    const isActive = (path) => location.pathname === path;
 const activeClass = "text-gray-900";
-const defaultClass = "text-[#002E5B]";
+const defaultClass = "text-[#644e40]";
   return (
       <div>
       <div className="hidden md:flex bg-[#644e40] p-3 justify-center items-center gap-8 text-white text-sm w-full z-10">
@@ -111,16 +111,15 @@ const defaultClass = "text-[#002E5B]";
   onClick={handlenav}
 />
 
-
-    <div className="lg:hidden">
-      <button onClick={toggleMobileMenu} className="focus:outline-none">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
-          viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
+<div className="lg:hidden">
+  <button onClick={toggleMobileMenu} className="focus:outline-none text-[#002E5B] hover:text-[#da9f7e]">
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2"
+      viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round"
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</div>
 
     <div className="hidden lg:flex flex-[2] gap-x-12 text-sm font-semibold items-center">
       <Link to="/" className={isActive("/") ? activeClass : defaultClass}>HOME</Link>
@@ -156,40 +155,79 @@ const defaultClass = "text-[#002E5B]";
     </div>
   </div>
 
- {mobileMenuOpen && (
-  <div className="lg:hidden px-6 pb-4 flex flex-col space-y-4 text-sm font-semibold text-[#002E5B]">
-    <Link to="/" onClick={closeMobileMenu} className={isActive("/") ? activeClass : defaultClass}>
+{mobileMenuOpen && (
+  <div className="lg:hidden px-6 pb-6 flex flex-col space-y-5 text-sm font-semibold text-[#002E5B]">
+    <Link 
+      to="/" 
+      onClick={closeMobileMenu} 
+      className={`py-2 ${isActive("/") ? activeClass : defaultClass}`}
+    >
       HOME
     </Link>
-    <Link to="/aboutus" onClick={closeMobileMenu} className={isActive("/aboutus") ? activeClass : defaultClass}>
+    
+    <Link 
+      to="/aboutus" 
+      onClick={closeMobileMenu} 
+      className={`py-2 ${isActive("/aboutus") ? activeClass : defaultClass}`}
+    >
       ABOUT US
     </Link>
-    <Link to="/services" onClick={closeMobileMenu} className={isActive("/services") ? activeClass : defaultClass}>
+    
+    <Link 
+      to="/services" 
+      onClick={closeMobileMenu} 
+      className={`py-2 ${isActive("/services") ? activeClass : defaultClass}`}
+    >
       SERVICES
     </Link>
 
     <div className="flex flex-col">
-      <button onClick={toggleMobileDropdown} className="text-left">
+      <button 
+        onClick={toggleMobileDropdown} 
+        className="text-left py-2 flex items-center justify-between"
+      >
         RESOURCES
+        <span>{mobileDropdownOpen ? '▲' : '▼'}</span>
       </button>
+
       {mobileDropdownOpen && (
-        <div className="ml-4 mt-2 flex flex-col space-y-2 text-sm">
-          <Link to="/fc" onClick={closeMobileMenu} className="block">Financial Calculators</Link>
-          <Link to="/useful_links" onClick={closeMobileMenu} className="block">Useful Links</Link>
-          <Link to="/faq" onClick={closeMobileMenu} className="block">FAQ</Link>
+        <div className="ml-4 mt-2 flex flex-col space-y-3 text-sm transition-all duration-300">
+          <Link to="/fc" onClick={closeMobileMenu} className="py-1">Financial Calculators</Link>
+          <Link to="/useful_links" onClick={closeMobileMenu} className="py-1">Useful Links</Link>
+          <Link to="/faq" onClick={closeMobileMenu} className="py-1">FAQ</Link>
         </div>
       )}
     </div>
 
-    <Link to="/partnership" onClick={closeMobileMenu} className={isActive("/partnership") ? activeClass : defaultClass}>
+    <Link 
+      to="/partnership" 
+      onClick={closeMobileMenu} 
+      className={`py-2 ${isActive("/partnership") ? activeClass : defaultClass}`}
+    >
       PARTNERSHIP
     </Link>
-    <Link to="/contactus" onClick={closeMobileMenu} className={isActive("/contactus") ? activeClass : defaultClass}>
+
+    <Link 
+      to="/contactus" 
+      onClick={closeMobileMenu} 
+      className={`py-2 ${isActive("/contactus") ? activeClass : defaultClass}`}
+    >
       CONTACT US
     </Link>
-    <div className="flex gap-4 mt-4">
-      <a href="https://www.facebook.com/profile.php?id=61563002765802"><FaFacebook className="w-5 h-5" /></a>
-      <a href="https://www.linkedin.com/company/munna-llc-mandava-financial-services/"><FaLinkedinIn className="w-5 h-5" /></a>
+
+    <div className="flex gap-6 mt-6">
+      <a 
+        href="https://www.facebook.com/profile.php?id=61563002765802" 
+        aria-label="Facebook"
+      >
+        <FaFacebook className="w-6 h-6" />
+      </a>
+      <a 
+        href="https://www.linkedin.com/company/munna-llc-mandava-financial-services/" 
+        aria-label="LinkedIn"
+      >
+        <FaLinkedinIn className="w-6 h-6" />
+      </a>
     </div>
   </div>
 )}

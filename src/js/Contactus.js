@@ -87,70 +87,83 @@ function Contactus()
 </div>
 <div className="max-w-4xl mx-auto p-8">
       <h2 className="text-3xl font-bold text-blue-900 mb-8">Feedback Form</h2>
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label className="block font-semibold mb-2">First name *</label>
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-            className="w-full p-4 border border-gray-300 rounded"
-          />
-        </div>
-        <div className="row-span-2">
-          <label className="block font-semibold mb-2">Your Message *</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            className="w-full h-full p-4 border border-gray-300 rounded"
-          />
-        </div>
-        <div>
-          <label className="block font-semibold mb-2">E-mail *</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full p-4 border border-gray-300 rounded"
-          />
-        </div>
-        <div>
-          <label className="block font-semibold mb-2">Phone</label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full p-4 border border-gray-300 rounded"
-          />
-        </div>
-        <div className="md:col-span-2 flex items-center">
-          <input
-            type="checkbox"
-            name="consent"
-            checked={formData.consent}
-            onChange={handleChange}
-            className="mr-2"
-            required
-          />
-          <label>I agree with storage and handling of my data by this website.</label>
-        </div>
-        <div className="md:col-span-2">
-          <button
-            type="submit"
-            className="bg-gray-900 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-bold flex items-center gap-2"
-          >
-            SEND
-            <span className="text-xl">➤</span>
-          </button>
-        </div>
-      </form>
+    <form
+  action="https://formsubmit.co/neerajsai290@gmail.com"
+  method="POST"
+  className="grid grid-cols-1 md:grid-cols-2 gap-6"
+>
+  {/* Hidden fields for optional extras */}
+  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+  <input type="hidden" name="_captcha" value="false" />
+
+  <div>
+    <label className="block font-semibold mb-2">First name *</label>
+    <input
+      type="text"
+      name="firstName"
+      value={formData.firstName}
+      onChange={handleChange}
+      required
+      className="w-full p-4 border border-gray-300 rounded"
+    />
+  </div>
+
+  <div className="row-span-2">
+    <label className="block font-semibold mb-2">Your Message *</label>
+    <textarea
+      name="message"
+      value={formData.message}
+      onChange={handleChange}
+      required
+      className="w-full h-full p-4 border border-gray-300 rounded"
+    />
+  </div>
+
+  <div>
+    <label className="block font-semibold mb-2">E-mail *</label>
+    <input
+      type="email"
+      name="email"
+      value={formData.email}
+      onChange={handleChange}
+      required
+      className="w-full p-4 border border-gray-300 rounded"
+    />
+  </div>
+
+  <div>
+    <label className="block font-semibold mb-2">Phone</label>
+    <input
+      type="tel"
+      name="phone"
+      value={formData.phone}
+      onChange={handleChange}
+      className="w-full p-4 border border-gray-300 rounded"
+    />
+  </div>
+
+  <div className="md:col-span-2 flex items-center">
+    <input
+      type="checkbox"
+      name="consent"
+      checked={formData.consent}
+      onChange={handleChange}
+      className="mr-2"
+      required
+    />
+    <label>I agree with storage and handling of my data by this website.</label>
+  </div>
+
+  <div className="md:col-span-2">
+    <button
+      type="submit"
+      className="bg-gray-900 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-bold flex items-center gap-2"
+    >
+      SEND <span className="text-xl">➤</span>
+    </button>
+  </div>
+</form>
+
     </div>
         </>
     );
