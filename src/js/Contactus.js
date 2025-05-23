@@ -92,8 +92,7 @@ function Contactus()
   method="POST"
   className="grid grid-cols-1 md:grid-cols-2 gap-6"
 >
-  {/* Hidden fields for optional extras */}
-  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+  <input type="hidden" name="_next" value="https://myportfolio.vercel.app/contactus" />
   <input type="hidden" name="_captcha" value="false" />
 
   <div>
