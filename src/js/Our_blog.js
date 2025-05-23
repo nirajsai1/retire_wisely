@@ -53,7 +53,7 @@ export const Our_blog = () =>
             </div>
             <div className="">
               <img src={post.image} alt="Insurance Guide" className="w-full h-full  mb-4" />
-              <Link to={post.link} className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-full">
+              <Link to={post.link} className="inline-block bg-[#644e40] hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-full">
                 READ MORE
               </Link>
             </div>
