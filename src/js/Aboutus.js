@@ -1,9 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import tarun_mandava from "../images/Tarun_mandava.jpg";
-function Aboutus()
-{
+
+function Aboutus() {
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = new FormData();
+    Object.entries(formData).forEach(([key, val]) => {
+      data.append(key, val);
+    });
+    data.append("_captcha", "false");
+
+    try {
+      const response = await fetch("https://formsubmit.co/neerajsai290@gmail.com", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        toast.success("✅ Your message was sent successfully!");
+        setFormData({
+          first_name: "",
+          last_name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        toast.error("❌ Failed to send. Please try again.");
+      }
+    } catch (err) {
+      toast.error("⚠️ Network error. Please try again.");
+    }
+  };
     return(
 <>
+      <ToastContainer position="top-right" autoClose={3000} />
   <div className="max-w-screen-xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-2 items-start pt-16 pr-4">
     
@@ -86,54 +139,79 @@ function Aboutus()
 
     <div className="bg-gray-100 p-6 rounded-md">
       <h2 className="text-2xl font-bold text-center text-blue-900 mb-6">Book An Appointment</h2>
-      <form className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium mb-1">First Name</label>
-          <input
-            type="text"
-            placeholder="First Name"
-            className="w-full p-3 bg-gray-200 rounded-md outline-none"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Last Name</label>
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="w-full p-3 bg-gray-200 rounded-md outline-none"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Email *</label>
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-3 bg-gray-200 rounded-md outline-none"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">How Can We Call You Back?</label>
-          <input
-            type="tel"
-            placeholder="Phone"
-            className="w-full p-3 bg-gray-200 rounded-md outline-none"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Do you have any additional questions?</label>
-          <textarea
-            placeholder="Your message..."
-            className="w-full p-3 bg-gray-200 rounded-md outline-none"
-            rows="3"
-          />
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-gray-800 text-white py-3 rounded-md font-semibold"
-        >
-          Submit Your Request
-        </button>
-      </form>
+        <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium mb-1">First Name</label>
+              <input
+                type="text"
+                name="first_name"
+                value={formData.first_name}
+                onChange={handleChange}
+                placeholder="First Name"
+                required
+                className="w-full p-3 bg-gray-200 rounded-md outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Last Name</label>
+              <input
+                type="text"
+                name="last_name"
+                value={formData.last_name}
+                onChange={handleChange}
+                placeholder="Last Name"
+                required
+                className="w-full p-3 bg-gray-200 rounded-md outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Email *</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+                className="w-full p-3 bg-gray-200 rounded-md outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone"
+                className="w-full p-3 bg-gray-200 rounded-md outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">
+                Do you have any additional questions?
+              </label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your message..."
+                className="w-full p-3 bg-gray-200 rounded-md outline-none"
+                rows="3"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-gray-800 text-white py-3 rounded-md font-semibold"
+            >
+              Submit Your Request
+            </button>
+          </form>
     </div>
   </div>
 </>
