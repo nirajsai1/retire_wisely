@@ -187,7 +187,7 @@ function Contactus() {
           <div className="md:col-span-2">
             <button
               type="submit"
-              className="bg-gray-900 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-bold flex items-center gap-2"
+              className="bg-gray-900 hover:bg-[#644e40] text-white px-8 py-3 rounded-full font-bold flex items-center gap-2"
             >
               SEND <span className="text-xl">➤</span>
             </button>

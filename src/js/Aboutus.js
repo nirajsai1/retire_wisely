@@ -207,7 +207,7 @@ function Aboutus() {
 
             <button
               type="submit"
-              className="w-full bg-gray-800 text-white py-3 rounded-md font-semibold"
+              className="w-full bg-gray-800 hover:bg-[#644e40] text-white py-3 rounded-md font-semibold"
             >
               Submit Your Request
             </button>

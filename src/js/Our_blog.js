@@ -53,7 +53,7 @@ export const Our_blog = () =>
             </div>
             <div className="">
               <img src={post.image} alt="Insurance Guide" className="w-full h-full  mb-4" />
-              <Link to={post.link} className="inline-block bg-[#644e40] hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-full">
+              <Link to={post.link} className="inline-block bg-gray-900 hover:bg-[#644e40] text-white font-semibold px-6 py-2 rounded-full">
                 READ MORE
               </Link>
             </div>
@@ -66,10 +66,10 @@ export const Our_blog = () =>
           <h2 className="text-xl font-bold text-[#002E5B] mb-2 pb-5">Recent Posts</h2>
           <ul className="space-y-2 text-blue-700 text-sm">
             <li><Link to='/blog1'>Step-by-Step Guide to Becoming a Licensed Life Insurance Agent</Link></li>
-            <li><Link to='/blog2'>Insurance Sales Training: Techniques for Success and Industry-Specific Tips</Link></li>
-            <li><Link to="/blog3">The Best Ways for Agents to Get Life Insurance Leads</Link></li>
-            <li><Link to="blog4">How To Start Your Own Independent Insurance Agency</Link></li>
-            <li><Link to="blog5">How Can I Sell My Life Insurance Policy?</Link></li>
+            <li><Link to='/blog2'>The Best Ways for Agents to Get Life Insurance Leads</Link></li>
+            <li><Link to="/blog3">How To Start Your Own Independent Insurance Agency</Link></li>
+            <li><Link to="blog4">Crafting an Effective Bio for Insurance Agents: Tips and Examples</Link></li>
+            <li><Link to="blog5">How to Increase Insurance Sales</Link></li>
           </ul>
         </div>
         <div>

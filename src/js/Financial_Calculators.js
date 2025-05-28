@@ -104,8 +104,14 @@ function Financial_Calculators()
       <ul className="space-y-2">
         {category.items.map((item, index) => (
           <li key={index} className="text-sm text-[#002E5B] hover:underline cursor-pointer">
-            &#9675; <a href={item.link} className="hover:underline">{item.text}</a>
-          </li>
+  &#9675;{" "}
+  <span
+    onClick={() => window.open(item.link, '_blank')}
+    className="hover:underline cursor-pointer"
+  >
+    {item.text}
+  </span>
+</li>
         ))}
       </ul>
     </div>

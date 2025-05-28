@@ -1,4 +1,5 @@
-import blog3 from "../../images/blog_4.png";
+import blog3 from "../../images/blog_3.png";
+import { Link } from "react-router-dom";
 function Blog3()
 {
     return(
@@ -105,30 +106,20 @@ Knowledge and Expertise: Starting an insurance agency requires a solid understan
                 </div>
         
                 {/* Sidebar */}
-                <aside className="w-full lg:w-1/4">
-                  <div className="mb-6">
-                    <h2 className="text-xl font-bold text-[#002E5B] mb-4 pb-2 border-b border-gray-300">
-                      Recent Posts
-                    </h2>
-                    <ul className="space-y-2 text-blue-700 text-sm">
-                      <li>
-                        <a href="#">Step-by-Step Guide to Becoming a Licensed Life Insurance Agent</a>
-                      </li>
-                      <li>
-                        <a href="#">Insurance Sales Training: Techniques for Success and Industry-Specific Tips</a>
-                      </li>
-                      <li>
-                        <a href="#">The Best Ways for Agents to Get Life Insurance Leads</a>
-                      </li>
-                      <li>
-                        <a href="#">How To Start Your Own Independent Insurance Agency</a>
-                      </li>
-                      <li>
-                        <a href="#">How Can I Sell My Life Insurance Policy?</a>
-                      </li>
-                    </ul>
-                  </div>
-                </aside>
+                 <aside className="lg:col-span-1">
+        <div className="mb-6">
+          <h2 className="text-xl font-bold text-[#002E5B] mb-2 pb-5">Recent Posts</h2>
+          <ul className="space-y-2 text-blue-700 text-sm">
+            <li><Link to='/blog1'>Step-by-Step Guide to Becoming a Licensed Life Insurance Agent</Link></li>
+            <li><Link to='/blog2'>The Best Ways for Agents to Get Life Insurance Leads</Link></li>
+            <li><Link to="/blog3">How To Start Your Own Independent Insurance Agency</Link></li>
+            <li><Link to="/blog4">Crafting an Effective Bio for Insurance Agents: Tips and Examples</Link></li>
+            <li><Link to="/blog5">How to Increase Insurance Sales</Link></li>
+          </ul>
+        </div>
+        <div>
+        </div>
+      </aside>
               </div>
               </div>
             </div>

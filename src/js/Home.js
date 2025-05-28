@@ -89,7 +89,7 @@ const settings = {
 
   <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 py-12 flex flex-col md:flex-row items-center gap-10">
     <div className="relative w-full md:w-1/2">
-      <img src={retirewisely} alt="RetireWisely Financial Services" className="w-full h-auto rounded" />
+      <img src={retirewisely} alt="Mandava Financial Services" className="w-full h-auto rounded" />
     </div>
     <div className="w-full md:w-1/2">
       <h2 className="text-3xl font-semibold text-[#002E5B] mb-4">

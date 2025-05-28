@@ -1,9 +1,65 @@
-import React from "react";
+import React,{useState} from "react";
 import consulting from "../images/mb_picture.jpeg";
 import tarun from "../images/Tarun_mandava.jpg";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ProfileSection = () => {
     const expertise= ["Personalized Approach","Innovative Thinking","Expertise in Market Trends","Comprehensive Services"]
+     const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    city: "",
+    state: "",
+    country: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = new FormData();
+    Object.entries(formData).forEach(([key, val]) => {
+      data.append(key, val);
+    });
+    data.append("_captcha", "false");
+
+    try {
+      const response = await fetch("https://formsubmit.co/neerajsai290@gmail.com", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        toast.success("✅ Your message was sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          city: "",
+          state: "",
+          country: "",
+        });
+      } else {
+        toast.error("❌ Failed to send. Please try again.");
+      }
+    } catch (err) {
+      toast.error("⚠️ Network error. Please try again.");
+    }
+  }
   return (
    <>
   <div className="pb-5 max-w-screen-xl mx-auto px-6 sm:px-10 py-5">
@@ -35,15 +91,15 @@ const ProfileSection = () => {
   </div>
 
   <p className="text-[#002E5B] text-sm py-5 max-w-screen-xl mx-auto px-6 sm:px-10">
-    Madhusudana Budati is an IT Engineer by background but now owns and operates a successful financial services agency. Madhusudana has 20+ years of corporate background working for Fortune 500 companies, where he handled corporate roles with increasing responsibility.
+    Tarun Kumar Mandava is an IT Engineer by background but now owns and operates a successful financial services agency. Tarun Kumar has 20+ years of corporate background working for Fortune 500 companies, where he handled corporate roles with increasing responsibility.
   </p>
 
   <p className="text-[#002E5B] text-sm py-5 max-w-screen-xl mx-auto px-6 sm:px-10">
-    He wanted to create a legacy for his family and was always in a quest to find opportunities to generate passive cash flow. He realized the financial services industry is one of the largest, oldest, and ever-growing industries in the world. Pursuing the mission to educate more families financially, Madhusudana achieved his dream by creating RetireWisely Financial Services.
+    He wanted to create a legacy for his family and was always in a quest to find opportunities to generate passive cash flow. He realized the financial services industry is one of the largest, oldest, and ever-growing industries in the world. Pursuing the mission to educate more families financially, Tarun Kumar achieved his dream by creating Mandava Financial Services.
   </p>
 
   <p className="text-[#002E5B] text-sm py-5 max-w-screen-xl mx-auto px-6 sm:px-10">
-    Through RetireWisely Financial Services, Madhusudana is following his grand vision of “Create Wealth for Families” by helping more and more families learn the basics of personal finances and make a positive difference for families and, more importantly, giving an equal opportunity to people who have a dream of owning a business in the financial services industry.
+    Through Mandava Financial Services, Tarun Kumar is following his grand vision of “Create Wealth for Families” by helping more and more families learn the basics of personal finances and make a positive difference for families and, more importantly, giving an equal opportunity to people who have a dream of owning a business in the financial services industry.
   </p>
 
   <div className="max-w-screen-xl mx-auto px-6 sm:px-10 pb-16 pt-8">
@@ -51,19 +107,34 @@ const ProfileSection = () => {
       <div className="grid md:grid-cols-3 gap-6 items-start pb-5">
         <div>
           <h2 className="text-lg font-bold mb-4">Contact Details</h2>
-          <p className="flex items-center gap-2"><FaPhoneAlt /> +1 804 339-1339</p>
-          <p className="flex items-center gap-2"><FaEnvelope /> mbudati@retirewisely.biz</p>
+          <p className="flex items-center gap-2"><FaPhoneAlt /> +1 319-853-3385</p>
+          <p className="flex items-center gap-2"><FaEnvelope /> tarunmandava.fin@gmail.com</p>
         </div>
 
         <div>
-          <p className="flex items-center gap-2"><FaMapMarkerAlt /> 116 Foreside Rd, Malvern PA 19355 U.S.</p>
+          <p className="flex items-center gap-2"><FaMapMarkerAlt /> 1984 Allerton Way, Spring Hill, TN 37174</p>
         </div>
 
         <div>
           <h3 className="font-semibold mb-2">Social Profiles</h3>
-          <div className="flex gap-3">
-            <a href="#" className="bg-white text-[#002E5B] p-2 rounded-full hover:bg-green-600 hover:text-white transition-colors"><FaFacebookF /></a>
-            <a href="#" className="bg-white text-[#002E5B] p-2 rounded-full hover:bg-green-600 hover:text-white transition-colors"><FaLinkedinIn /></a>
+          <div className="flex gap-3"><a
+  href="https://www.facebook.com/profile.php?id=61563002765802"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white text-[#002E5B] p-2 rounded-full hover:bg-gray-900 hover:text-white transition-colors"
+>
+  <FaFacebookF />
+</a>
+
+<a
+  href="https://www.linkedin.com/company/munna-llc-mandava-financial-services/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white text-[#002E5B] p-2 rounded-full hover:bg-gray-900 hover:text-white transition-colors"
+>
+  <FaLinkedinIn />
+</a>
+
           </div>
         </div>
       </div>
@@ -78,20 +149,79 @@ const ProfileSection = () => {
           </p>
         </div>
 
-        <form className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="First Name" />
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Last Name" />
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="E-mail" />
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="Phone Number" />
-          <input className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" placeholder="City" />
-          <select className="p-3 bg-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
-            <option>Select State (USA only)</option>
-          </select>
-          <select className="p-3 bg-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
-            <option>Select Country</option>
-          </select>
-          <input type="submit" className="bg-[#002E5B] text-white rounded-2xl py-3 hover:bg-[#001d3d] transition duration-300" value="Submit" />
-        </form>
+        <form
+      className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6"
+      onSubmit={handleSubmit}
+    >
+      <input
+        name="firstName"
+        value={formData.firstName}
+        onChange={handleChange}
+        className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+        placeholder="First Name"
+        required
+      />
+      <input
+        name="lastName"
+        value={formData.lastName}
+        onChange={handleChange}
+        className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+        placeholder="Last Name"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+        placeholder="E-mail"
+        required
+      />
+      <input
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+        placeholder="Phone Number"
+      />
+      <input
+        name="city"
+        value={formData.city}
+        onChange={handleChange}
+        className="p-3 bg-gray-300 placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+        placeholder="City"
+      />
+      <select
+        name="state"
+        value={formData.state}
+        onChange={handleChange}
+        className="p-3 bg-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+        required
+      >
+        <option value="">Select State (USA only)</option>
+        <option value="NY">New York</option>
+        <option value="CA">California</option>
+        {/* add more states as needed */}
+      </select>
+      <select
+        name="country"
+        value={formData.country}
+        onChange={handleChange}
+        className="p-3 bg-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+        required
+      >
+        <option value="">Select Country</option>
+        <option value="USA">United States</option>
+        <option value="CAN">Canada</option>
+        {/* add more countries as needed */}
+      </select>
+      <input
+        type="submit"
+        className="bg-[#002E5B] text-white rounded-2xl py-3 hover:bg-[#001d3d] transition duration-300 cursor-pointer"
+        value="Submit"
+      />
+    </form>
       </div>
     </div>
   </div>
