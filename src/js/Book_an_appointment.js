@@ -1,7 +1,7 @@
 import calendar from "../images/showcase_calendar.png";
 import { useState } from "react";
 import { InlineWidget } from "react-calendly";
-import { Clock, MapPin } from "lucide-react";
+import { Clock, MapPin ,Video} from "lucide-react";
 import logo from "../images/baa_logo.jpeg";
 import mbp from "../images/mb_picture.jpeg";
 import munna_llc from "../images/munna_llc.jpg";
@@ -41,10 +41,18 @@ function Book_an_appointment() {
             <Clock className="w-5 h-5" />
             <p className="pl-2">45 min</p>
           </div>
-          <div className="flex pt-2 font-semibold text-gray-500">
-            <MapPin className="w-5 h-5" />
-            <p className="pl-2 break-words">https://zoom.us/j/4844674744</p>
-          </div>
+         <div className="flex pt-2 font-semibold text-gray-500">
+  <Video className="w-5 h-6" />
+  <a 
+    href="https://tinyurl.com/MFSServices" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="pl-2 break-words"
+  >
+    tinyurl.com/MFSServices
+  </a>
+</div>
+
 
           <p className="text-[#002E5B] text-md pt-4 font-semibold">
             Please choose a time that works best for you, and I'll be happy to discuss how we can meet your financial goals together.

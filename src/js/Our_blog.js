@@ -1,5 +1,5 @@
 import React from "react";
-import blog1 from "../images/blog_1.png";
+import blog1 from "../images/new_blog.jpg";
 import blog3 from "../images/blog_3.png";
 import blog2 from "../images/blog_2.png";
 import blog4 from "../images/blog_4.png";
@@ -17,7 +17,7 @@ export const Our_blog = () =>
       
         {[
           { 
-            title: "Step-By-Step Guide To Becoming A Licensed Life Insurance Agent", 
+            title: "Tarun Kumar Mandava, Silver Legacy Owner!", 
             date: "November 26, 2024", 
             image: blog1, 
             link: "/blog1"
@@ -65,7 +65,7 @@ export const Our_blog = () =>
         <div className="mb-6">
           <h2 className="text-xl font-bold text-[#002E5B] mb-2 pb-5">Recent Posts</h2>
           <ul className="space-y-2 text-blue-700 text-sm">
-            <li><Link to='/blog1'>Step-by-Step Guide to Becoming a Licensed Life Insurance Agent</Link></li>
+            <li><Link to='/blog1'>Tarun Kumar Mandava, Silver Legacy Owner!</Link></li>
             <li><Link to='/blog2'>The Best Ways for Agents to Get Life Insurance Leads</Link></li>
             <li><Link to="/blog3">How To Start Your Own Independent Insurance Agency</Link></li>
             <li><Link to="blog4">Crafting an Effective Bio for Insurance Agents: Tips and Examples</Link></li>

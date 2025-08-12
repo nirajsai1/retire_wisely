@@ -65,7 +65,7 @@ const defaultClass = "text-[#644e40]";
       <div className="hidden md:flex bg-[#644e40] p-3 justify-center items-center gap-8 text-white text-sm w-full z-10">
         <div 
           className="flex items-center px-4 py-2 cursor-pointer transition hover:bg-gray-900 hover:rounded-xl hover:border hover:border-[#d7a07d] whitespace-nowrap"
-          onClick={() => navigate('/baa')}
+          onClick={() => navigate('/BookAnAppointment')}
         >
           <CalendarPlus className="text-white w-5 h-5" />
           <span className="font-semibold pl-3 text-white">BOOK AN APPOINTMENT</span>
@@ -85,7 +85,7 @@ const defaultClass = "text-[#644e40]";
       <div className="flex md:hidden bg-[#644e40] px-2 py-2 items-center gap-2 text-white text-[10px] w-full overflow-x-auto whitespace-nowrap scrollbar-none">
         <div 
           className="flex items-center px-2 py-1 cursor-pointer transition hover:bg-[#002E5B] hover:rounded-lg hover:border hover:border-[#002E5B]"
-          onClick={() => navigate('/baa')}
+          onClick={() => navigate('/BookAnAppointment')}
         >
           <CalendarPlus className="text-white w-3.5 h-3.5" />
           <span className="font-semibold pl-1">BOOK AN APPOINTMENT</span>
@@ -130,13 +130,13 @@ const defaultClass = "text-[#644e40]";
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
-            className={`font-semibold text-sm focus:outline-none ${isActive("/fc") || isActive("/useful_links") || isActive("/faq") ? activeClass : defaultClass}`}
+            className={`font-semibold text-sm focus:outline-none ${isActive("/financialCalculators") || isActive("/useful_links") || isActive("/faq") ? activeClass : defaultClass}`}
           >
             RESOURCES
           </button>
           {dropdownOpen && (
             <div className="absolute bg-gray-900 shadow-lg mt-2 rounded-md z-30 w-40 text-white">
-              <Link to="/fc" className="block px-4 py-2 hover:bg-[#da9f7e]" onClick={handleOptionClick}>Financial Calculators</Link>
+              <Link to="/financialCalculators" className="block px-4 py-2 hover:bg-[#da9f7e]" onClick={handleOptionClick}>Financial Calculators</Link>
               <Link to="/useful_links" className="block px-4 py-2 hover:bg-[#da9f7e]" onClick={handleOptionClick}>Useful Links</Link>
               <Link to="/faq" className="block px-4 py-2 hover:bg-[#da9f7e]" onClick={handleOptionClick}>Frequently Asked Questions</Link>
             </div>
@@ -192,7 +192,7 @@ const defaultClass = "text-[#644e40]";
 
       {mobileDropdownOpen && (
         <div className="ml-4 mt-2 flex flex-col space-y-3 text-sm transition-all duration-300">
-          <Link to="/fc" onClick={closeMobileMenu} className="py-1">Financial Calculators</Link>
+          <Link to="/financialCalculators" onClick={closeMobileMenu} className="py-1">Financial Calculators</Link>
           <Link to="/useful_links" onClick={closeMobileMenu} className="py-1">Useful Links</Link>
           <Link to="/faq" onClick={closeMobileMenu} className="py-1">FAQ</Link>
         </div>
@@ -243,14 +243,14 @@ const defaultClass = "text-[#644e40]";
             <Route path="/resources" element={<Resources />} />
             <Route path="/services" element={<Services />} />
             <Route path="/faq" element={<Faq />} />
-            <Route path="/fc" element={<FC />} />
+            <Route path="/financialCalculators" element={<FC />} />
             <Route path="/useful_links" element={<Useful_links />} />
             <Route path="/retirement_p" element={<Retirement_planning/>}></Route>
             <Route path="/college_p" element={<College_planning></College_planning>}></Route>
             <Route path="/tax_p" element={<Tax_planning></Tax_planning>}></Route>
             <Route path='/pp' element={<Privacy_policy/>}></Route>
             <Route path='/our_blog' element={<Our_blog></Our_blog>}></Route>
-            <Route path='/baa' element={<Book_an_appointment></Book_an_appointment>}></Route>
+            <Route path='/BookAnAppointment' element={<Book_an_appointment></Book_an_appointment>}></Route>
             <Route path='/psection' element={<ProfileSection/>}></Route>
             <Route path='/blog1' element={<Blog1/>}></Route>
             <Route path='/blog2' element={<Blog2/>}></Route>
@@ -264,7 +264,7 @@ const defaultClass = "text-[#644e40]";
   <div className="bg-[#644e40] px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
     <h2 className="text-xl sm:text-2xl font-bold">Looking For A Financial Consultant?</h2>
     <button
-      onClick={() => navigate('/baa')}
+      onClick={() => navigate('/BookAnAppointment')}
       className="mt-3 sm:mt-0 bg-gray-900 hover:bg-[#001f3d] text-white font-semibold px-6 py-2 rounded shadow"
     >
       BOOK AN APPOINTMENT
@@ -305,7 +305,7 @@ const defaultClass = "text-[#644e40]";
         <li><Link to="/resources">Resources</Link></li>
         <li><Link to="/contactus">Contact Us</Link></li>
         <li><Link to="/pp">Privacy Policy</Link></li>
-        <li><Link to="/baa">Book Appointment</Link></li>
+        <li><Link to="/BookAnAppointment">Book Appointment</Link></li>
         <li><Link to="/our_blog">Our Blog</Link></li>
       </ul>
     </div>

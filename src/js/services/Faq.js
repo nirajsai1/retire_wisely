@@ -58,7 +58,7 @@ const Faq = () =>
     
     const faqs = [
         {
-          question: 'Why Retirewisely Financial Services?',
+          question: 'Why Mandava Financial Services?',
           answer:
             'We are a fastest growing full-fledged independent financial services marketing company offering Investments, Real Estate, Retirement, Insurance, and Estate Planning from reputable companies (Fortune 100) from Wallstreet. We are like one stop shop.',
         },

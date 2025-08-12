@@ -78,48 +78,58 @@ function Contactus() {
             className="shadow-lg h-full w-full object-cover"
           />
         </div>
-        <div className="h-[400px]">
-          <iframe
-            src="https://www.google.com/maps?q=116+Foreside+Rd,+Malvern,+PA+19355&output=embed"
-            width="100%"
-            height="100%"
-            allowFullScreen=""
-            loading="lazy"
-            className="shadow-lg border w-full h-full"
-          ></iframe>
-        </div>
-        <div className="h-[400px]">
-          <Card className="h-full flex flex-col justify-between shadow-lg !rounded-none">
-            <CardContent className="h-full flex flex-col justify-between">
-              <div>
-                <h2 className="text-2xl font-bold text-blue-900">Contact Person</h2>
-                <div className="flex items-center gap-4 mt-4">
-                  <img
-                    src={tarun_mandava}
-                    alt="Tarun Mandava"
-                    className="w-16 h-16 object-cover"
-                  />
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Tarun Mandava</h3>
-                    <p className="text-sm text-gray-600">Financial Consultant</p>
-                    <p className="text-sm text-[#002E5B]">tarunmandava.fin@gmail.com</p>
-                  </div>
-                </div>
-              </div>
+       <div className="h-[400px] w-full">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.4877952249194!2d-86.91428152452788!3d35.76339227256082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88637899cfd7ef2b%3A0x44e03085db2f00f9!2s1984%20Allerton%20Wy%2C%20Spring%20Hill%2C%20TN%2037174%2C%20USA!5e0!3m2!1sen!2sin!4v1754982588845!5m2!1sen!2sin"
+    className="w-full h-full"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
 
-              <div className="space-y-2 mt-4">
-                <div className="flex items-start gap-2 text-gray-700">
-                  <MapPin className="w-5 h-5 mt-1" />
-                  <span>1984 Allerton Way, Spring Hill, TN 37174</span>
-                </div>
-                <div className="flex items-start gap-2 text-[#002E5B]">
-                  <Mail className="w-5 h-5 mt-1" />
-                  <span>tarunmandava.fin@gmail.com</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+       <div className="h-[400px]">
+  <Card className="h-full flex flex-col shadow-lg !rounded-none p-4">
+    <CardContent className="h-full flex flex-col justify-between p-0">
+
+      <div className="flex items-center gap-4">
+        <img
+          src={tarun_mandava}
+          alt="Tarun Mandava"
+          className="w-28 h-32 object-cover"
+        />
+        <div>
+          <h3 className="text-xl font-semibold text-gray-800">Tarun Mandava</h3>
+          <p className="text-sm text-gray-600">Financial Consultant</p>
+          <p className="text-sm text-[#002E5B]">tarunmandava.fin@gmail.com</p>
         </div>
+      </div>
+      <div className="text-sm text-[#002E5B] space-y-1">
+        <h3 className="text-lg font-semibold text-gray-800">I am a Certified Tax &amp; Business Advisor</h3>
+        
+        <p className="pl-14">Licensed Financial Consultant</p>
+        <p className="pl-14">Experienced Life Insurance Producer</p>
+        <p className="pl-14">Specialist in Tax Strategy &amp; Planning</p>
+        <p className="pl-14">Committed to Client Financial Growth</p>
+      </div>
+
+      {/* 3 — Address & Email */}
+      <div className="space-y-2">
+        <div className="flex items-start gap-2 text-gray-700">
+          <MapPin className="w-5 h-5 mt-1" />
+          <span>1984 Allerton Way, Spring Hill, TN 37174</span>
+        </div>
+        <div className="flex items-start gap-2 text-[#002E5B]">
+          <Mail className="w-5 h-5 mt-1" />
+          <span>tarunmandava.fin@gmail.com</span>
+        </div>
+      </div>
+
+    </CardContent>
+  </Card>
+</div>
+
       </div>
 
       <div className="max-w-4xl mx-auto p-8">
